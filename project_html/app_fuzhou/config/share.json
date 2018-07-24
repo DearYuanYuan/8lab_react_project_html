@@ -1,0 +1,90 @@
+{
+  "client_audit_hosts": [
+    {
+      "ip": "k8sproxy-service",
+      "name": "client_b"
+    }
+  ],
+  "server_ip": "192.168.1.239",
+  "blackbox_ip": "192.168.1.168",
+  "switch_waf_port": 8080,
+  "es_server_ip_port": [{"host": "192.168.1.243", "port": 9200}],
+  "bdb_host": "192.168.1.231",
+  "bdb_port": "10070",
+  "mongo_port": 28000,
+  "rabbitmq_server": "192.168.1.184",
+  "rabbitmq_port": 5672,
+  "db_ip_list": [
+    {
+      "ip": "192.168.1.236",
+      "db_types": "mysql;PostgreSQL",
+      "name": "mysql",
+      "mask": "255.255.252.0"
+    },
+    {
+      "ip": "192.168.1.181",
+      "db_types": "PostgreSQL",
+      "name": "PostgreSQL",
+      "mask": "255.255.252.0"
+    }
+  ],
+  "dvwa_address": "http://123.56.124.137/dvwa/login.php",
+  "used_ports": {
+    "waf": 5000,
+    "clamav_rpc": 9090,
+    "attack_ip": 5001,
+    "whitelist": 5570,
+    "blackbox_rpc": 5577,
+    "mysql_audit": 6666,
+    "clamav": 5555
+  },
+  "mysql_password": "8lab",
+  "mysql_user": "8lab",
+  "mysql_database": "octastack_fuzhou",
+  "mysql_port": 3306,
+  "mysql_host": "192.168.1.210",
+  "alarm_second": 15,
+  "alarm_enable": 1,
+  "redis4bigchanidb_host":"192.168.1.241",
+  "redis4bigchanidb_port": 9000,
+  "eagle_host": "192.168.1.182",
+  "eagle_port": 9099,
+  "enable_register": "on",
+  "ifr_urls": {
+    "k": "http://192.168.1.239:5601",
+    "b": "http://192.168.1.182:9099/eagle-service",
+    "t": "http://192.168.1.184:1443/tpotweb.html"
+  },
+  "bak_mongo_host": "192.168.1.232",
+  "bak_mongo_port": 27000,
+  "trustlog_index": "trustlog192.168.1.239-*",
+  "tamper_proof_url": "http://192.168.1.222:2345",
+  "chain_attach_mount_dir": "/data/chain/chain-attach/",
+  "chain_attach_url": "http://192.168.1.184/chain-attach/",
+  "snort_rpc_port": 30303,
+  "des_ip_addr": "110.88.128.28",
+  "waf_index": "waf*",
+  "face": {
+    "model_detection": "hog",
+    "tolerance": "0.45",
+    "knn_bool": "False",
+    "k": "1",
+    "scale_ratio": "0.5",
+    "addr": "rstp://xxxxxxxxxxx",
+    "type": "usb",
+    "size": "640,480"
+  },
+
+  "mysql_dtamper_web": "web_tamper_proof_db",
+  "mysql_dtamper_svn": "svn_tamper_proof_db",
+
+  "dtamper_redis_host": "192.168.1.241",
+  "dtamper_redis_port": "9000",
+
+  "aes_key": "ca$hc0w8L@6ExP0!",
+  "aes_iv": "ca$hc0w8L@6ExP0!",
+
+  "pay_alarm_key": "no_pay",
+  "qingyun_user": "996996",
+  "qingyun_pwd": "db45030336cc29a66d8404b3b14e7d5b10f8b09f"
+}

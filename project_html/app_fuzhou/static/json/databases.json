@@ -1,0 +1,22 @@
+[
+  {
+    "dbname": "db1",
+    "user": "root",
+    "password": "111",
+    "ip": "2.2.2.2",
+    "port": "80",
+    "type": "MySQL",
+    "size": "111Mb",
+    "capacity": "11111Mb"
+  },
+  {
+    "dbname": "db2",
+    "user": "root",
+    "password": "111",
+    "ip": "2.2.2.2",
+    "port": "80",
+    "type": "MySQL",
+    "size": "222Mb",
+    "capacity": "22222Mb"
+  }
+]

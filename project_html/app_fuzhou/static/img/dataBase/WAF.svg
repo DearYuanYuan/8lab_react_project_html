@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>IPS</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IPS" transform="translate(-9.000000, 0.000000)" points="122 59,72 205,194 114,49 114,171 205">
+            <path d="M37,8 C48.1087652,8 54.7023469,10.8564676 59.568326,18.2194199 C59.568326,17.2553195 52.0540646,0 37,0 C34.7908777,1.88203514e-16 33,1.790861 33,4 C33,6.209139 34.7908614,8 37,8 Z" id="Oval" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M5.84825905,29.795114 C16.9570243,29.795114 23.5506059,32.6515815 28.416585,40.0145339 C28.416585,39.0504335 20.9023236,21.795114 5.84825905,21.795114 C3.63913676,21.795114 1.84825905,23.585975 1.84825905,25.795114 C1.84825905,28.004253 3.63912042,29.795114 5.84825905,29.795114 Z" id="Oval" fill="#FFFFFF" fill-rule="nonzero" transform="translate(15.132422, 30.904824) rotate(-120.000000) translate(-15.132422, -30.904824) "></path>
+            <path d="M40.299252,45.875756 C51.4080172,45.875756 58.0015988,48.7322236 62.867578,56.0951759 C62.867578,55.1310755 55.3533166,37.875756 40.299252,37.875756 C38.0901297,37.875756 36.299252,39.666617 36.299252,41.875756 C36.299252,44.084895 38.0901134,45.875756 40.299252,45.875756 Z" id="Oval" fill="#FFFFFF" fill-rule="nonzero" transform="translate(49.583415, 46.985466) rotate(120.000000) translate(-49.583415, -46.985466) "></path>
+            <circle id="dbic-copy" fill="#4ACDEC" fill-rule="nonzero" cx="37" cy="29" r="15"></circle>
+            
+           
+
+        </g>
+         <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="rotate"
+                from="360 28 29"
+                to="0 28 29"
+                begin="0s"
+                dur="1s"
+                repeatCount="indefinite"
+        />
+    </g>
+    <text font-family="LucidaGrande, Lucida Grande" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="16.7236328" y="33.5">WAF</tspan>
+        </text>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/http_attack</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="birdview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3d-界面-copy" transform="translate(-939.000000, -780.000000)" fill="#F5A623">
+            <g id="Group-3" transform="translate(939.000000, 755.000000)">
+                <path d="M40,105 C17.90861,105 0,87.09139 0,65 C0,42.90861 17.90861,25 40,25 C62.09139,25 80,42.90861 80,65 C80,87.09139 62.09139,105 40,105 Z M24,45 L24,45 C19.581722,45 16,48.581722 16,53 L16,53 L16,85 L64,85 L64,45 L24,45 Z M21,63 L60,63 L60,81 L21,81 L21,63 Z M26,60 C28.7614237,60 31,57.7614237 31,55 C31,52.2385763 28.7614237,50 26,50 C23.2385763,50 21,52.2385763 21,55 C21,57.7614237 23.2385763,60 26,60 Z M41,60 C43.7614237,60 46,57.7614237 46,55 C46,52.2385763 43.7614237,50 41,50 C38.2385763,50 36,52.2385763 36,55 C36,57.7614237 38.2385763,60 41,60 Z M55,60 C57.7614237,60 60,57.7614237 60,55 C60,52.2385763 57.7614237,50 55,50 C52.2385763,50 50,52.2385763 50,55 C50,57.7614237 52.2385763,60 55,60 Z" id="icon/http_attack"></path>
+            </g>
+        </g>
+    </g>
+</svg>

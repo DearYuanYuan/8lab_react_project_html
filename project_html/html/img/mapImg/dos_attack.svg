@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/ddos_attack</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="birdview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3d-界面-copy" transform="translate(-1039.000000, -782.000000)" fill="#F5A623">
+            <g id="Group-6" transform="translate(1039.000000, 755.000000)">
+                <path d="M44.9497475,86.0918831 C48.8549904,89.997126 55.1866402,89.997126 59.0918831,86.0918831 C62.997126,82.1866402 62.997126,75.8549904 59.0918831,71.9497475 L40.7071068,53.5649712 L26.5649712,67.7071068 L44.9497475,86.0918831 Z M40,107 C17.90861,107 0,89.09139 0,67 C0,44.90861 17.90861,27 40,27 C62.09139,27 80,44.90861 80,67 C80,89.09139 62.09139,107 40,107 Z M35.7573593,48.6152237 L27.9791847,40.8370491 L24.4436508,51.4436508 L13.8370491,54.9791847 L21.6152237,62.7573593 L27.9791847,62.0502525 L35.0502525,54.9791847 L35.7573593,48.6152237 Z" id="icon/ddos_attack"></path>
+            </g>
+        </g>
+    </g>
+</svg>

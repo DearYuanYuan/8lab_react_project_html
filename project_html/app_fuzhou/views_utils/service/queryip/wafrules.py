@@ -1,0 +1,20 @@
+Rules = {
+    # BASE_RULES 对应HTTP防御（http --> http-defense）
+    'BASE_RULES': ['REQUEST-920-PROTOCOL-ENFORCEMENT.conf', 'REQUEST-921-PROTOCOL-ATTACK.conf',
+                   'RESPONSE-980-CORRELATION.conf'],
+    # EXPERIMENTAL_RULES 对应常见的Web攻击防护(web --> web-attack)
+    'EXPERIMENTAL_RULES': ['REQUEST-941-APPLICATION-ATTACK-XSS.conf', 'REQUEST-942-APPLICATION-ATTACK-SQLI.conf',
+                           'REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION.conf'],
+    # OPTIONAL_RULES 对应敏感数据跟踪(data --> Sensitive-data-tracking)
+    'OPTIONAL_RULES': ['REQUEST-910-IP-REPUTATION.conf', 'RESPONSE-950-DATA-LEAKAGES.conf'
+                       'RESPONSE-951-DATA-LEAKAGES-SQL.conf', 'RESPONSE-952-DATA-LEAKAGES-JAVA.conf'
+                       'RESPONSE-953-DATA-LEAKAGES-PHP.conf', 'RESPONSE-954-DATA-LEAKAGES-IIS.conf'],
+    # SLR_RULES 对应缺陷鉴定和错误检测(error --> identification-error)
+    'SLR_RULES': ['REQUEST-911-METHOD-ENFORCEMENT.conf', 'REQUEST-913-SCANNER-DETECTION.conf',
+                  'REQUEST-930-APPLICATION-ATTACK-LFI.conf', 'REQUEST-931-APPLICATION-ATTACK-RFI.conf',
+                  'REQUEST-932-APPLICATION-ATTACK-RCE.conf', 'REQUEST-933-APPLICATION-ATTACK-PHP.conf'],
+    # DOS_RULES 对应DOS攻击防护(dos --> dos-attack)
+    'DOS_RULES': ['REQUEST-912-DOS-PROTECTION.conf', 'REQUEST-949-BLOCKING-EVALUATION.conf'
+                  'RESPONSE-959-BLOCKING-EVALUATION.conf']
+}
+

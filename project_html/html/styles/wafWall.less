@@ -1,0 +1,302 @@
+@border-black:#444851;
+@bg-cover-deep-black:#252830;
+@bg-cover-black:#2E323C;
+@bg-cover:#202129;
+@btn-bg-deep:#007AE1;
+@color-blue:#32A1FF;
+@font-color-grey:#A1A6AD;
+@font-color-white:#fff;
+.waf-container{
+        padding: 68px 0 0 240px;
+        height:100%;
+        background: @bg-cover;
+        color:@font-color-white;
+    .waf-title{
+         padding:24px;
+         background: @bg-cover-black;
+         color: @font-color-white;
+         position: fixed;
+         width: 100%;
+         right: 0;
+         padding-left: 264px;
+         z-index: 99;
+         .left-part-icon{
+             float: left;
+             margin-right:24px;
+         }
+         .right-part-msg{
+             float: left;
+         }
+         .setDefense{
+             float: right;
+             width:120px;
+             height:40px;
+             line-height: 40px;
+             background: @btn-bg-deep;
+             color: @font-color-white;
+             margin-top:24px;
+             border-radius: 4px;
+          }
+    }
+
+}
+.chartpartcover{
+    padding:162px 24px 0 24px;
+}
+.attackPart,.firstChartPart,.totalAttack,.radarPart,.typeFlow,.typeAttack{
+    border:1px solid @border-black;
+    border-radius: 4px;
+    width:59%;
+    background: @bg-cover-deep-black;
+    float: left;
+    margin-bottom:2%;
+}
+.attackPart,.radarPart{
+    width: 39%;
+    margin-right: 2%;
+}
+.firstChartPart{
+    width: 39%;
+    margin-left: 2%;
+}
+.attackTitle{
+    font-size: 12px;
+    line-height: 50px;
+    color: @font-color-grey;
+    border-bottom:1px solid @border-black ;
+    margin:0 24px;
+    padding:0;
+}
+
+
+
+.list-date{
+    margin:0 24px;
+    border:1px solid @border-black ;
+    border-radius: 5px;
+    background: @bg-cover-deep-black;
+    color:@font-color-white;
+    .defense-date{
+        margin-left:24px;
+        font-size: 12px;
+        color: @font-color-grey;
+        margin-top:30px;
+    }
+    .tab-date-list{
+        padding-top:15px;
+        border-top:1px solid @border-black ;
+        border-bottom:1px solid @border-black ;
+        margin: 24px 24px 16px 24px;
+    }
+    .tab-date-list .data-list-title{
+        display: inline-block;
+        float: left;
+        line-height: 40px;
+        font-size: 12px;
+        padding:0 28px;
+        cursor: pointer;
+        margin-bottom:-1px;
+    }
+    .tab-date-list li.onShowDate{
+        border-bottom:1px solid @color-blue ;
+    }
+    .pagination-all{
+        margin-top: 0;
+    }
+}
+
+table.wafWallTable{
+    table-layout: fixed;
+}
+table{
+        width:100%;
+        color: @font-color-grey;
+        th,td{
+            line-height: 20px;
+            padding:20px 0 20px 40px;
+            word-wrap: break-word;
+        }
+       
+        tbody tr:nth-child(2n+1) {
+            background:@bg-cover-deep-black;
+            color: @font-color-white;
+        }
+        tbody  tr:nth-child(2n) {
+            background: @bg-cover-black;
+            color: @font-color-white;
+        }
+        tbody  tr td:nth-child(2n){
+            color: @color-blue;
+        }
+         thead tr{
+            background: @bg-cover-black;
+            color: @font-color-white;
+        }
+
+    }
+
+// 弹框
+.boxPagePart{
+    position: fixed;
+    right:0;
+    top:68px;
+    width:456px;
+    z-index: 999;
+    background: @bg-cover-deep-black;
+    padding-bottom: 24px;
+    // border:1px solid @border-black;
+    // height:560px;
+    height:90%;
+    overflow-y: scroll;
+    box-shadow: -3px 2px 15px #000;
+    .setBoxCover{
+        padding:24px;
+
+    }
+    ul li{
+        line-height: 34px;
+    }
+    .pagination-all{
+        text-align: center;
+        .pagination{
+            float: none;
+        }
+    }
+}
+.boxPagePart h3{
+    margin:0;
+}
+.boxSearch{
+    font-size: 12px;
+    input{
+        background: @bg-cover-deep-black;
+        border:1px solid @font-color-white;
+        line-height: 40px;
+        border-radius: 4px;
+        padding-left:24px;
+        width:256px;
+        height:40px;
+    }
+    button{
+        width:120px;
+        background: @btn-bg-deep;
+        color: @font-color-white;
+        line-height: 40px;
+        margin-left: 14px;
+        border-radius: 4px;
+    }
+}
+
+.setProtect{
+    display: inline-block;
+    float: right;
+    width:50px;
+    height:20px;
+    margin-top:5px;
+    background: url(../img/openOrClose.png) no-repeat center top;
+    background-size: 80%;
+    cursor: pointer;
+}
+.setOpen{
+    background: url(../img/openOrClose.png) no-repeat center -18px;
+    background-size: 80%;
+    opacity: 0.5;
+}
+.setOpacityUi{
+    opacity: 0.1
+}
+.attacktitlemenu {
+    margin-left:24px;
+    margin-bottom: 0;
+}
+.attacktitlemenu li{
+    display: inline-block;
+    margin-right: 24px;
+    font-size: 14px;
+    margin-top:20px;
+}
+.attackspan{
+    display: inline-block;
+    border-radius: 29px;
+    width: 40px;
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+.attackMore .attackspan{
+    background: linear-gradient(#9F86FF, #46287C);
+}
+.attackNormal .attackspan{
+    background: linear-gradient(#007AE1, #10328E);
+}
+
+.selectHttpBtn,.selectWebBtn,.selectDataBtn,
+.selectDosBtn,.selectErrorBtn{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    background:url(../img/selectIconSet.png) no-repeat left -22px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.selectHttpBtn{
+    background-position:0 -22px; 
+}
+.selectWebBtn{
+    background-position:-20px -22px;
+}
+.selectDosBtn{
+    background-position:-40px -22px;
+}
+.selectDataBtn{
+    background-position:-60px -22px;
+}
+.selectErrorBtn{
+    background-position:-80px -22px;
+}
+.selectBtnSet0{
+   background-position:0 3px;
+}
+.selectBtnSet1{
+   background-position:-20px 3px;
+}
+.selectBtnSet2{
+   background-position:-40px 3px;
+}
+.selectBtnSet3{
+   background-position:-60px 3px;
+}
+.selectBtnSet4{
+   background-position:-80px 3px;
+}
+
+
+// 滚动条
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+.boxPagePart::-webkit-scrollbar  
+{  
+    width: 10px;  
+    height: 16px;  
+    background-color: @bg-cover-black;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+.boxPagePart::-webkit-scrollbar-track
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 6px;  
+    background-color: @bg-cover-black;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+.boxPagePart::-webkit-scrollbar-thumb 
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: @btn-bg-deep;  
+} 
+.bigData{
+    width:100%;
+    overflow-x: hidden;
+}

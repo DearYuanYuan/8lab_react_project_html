@@ -1,0 +1,860 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css";
+@import "./jquery.toast";
+@import "./fontawesome-all.min.css";
+
+@import "base.less";
+//styles for verification code
+@import "./verification.css";
+//styles for login page
+@import "loginPage";
+//styles for headline
+@import "headline";
+//styles for homepage
+@import "homepage";
+//styles for whitelist.css
+@import "whitelist";
+//styles for plugin page
+@import "plugin";
+//styles for database page
+@import "database.less";
+//styles for environment page
+@import "environment";
+//styles for map page
+@import "map.css";
+//style for systemCheck page
+@import "systemCheck";
+@import "wafWall";
+//style for databaseAudit page
+@import "databaseAudit";
+//style for tamper
+@import "tamper";
+//style for svnblockchain
+@import "svnblockchain";
+//style for protectControl page
+@import "protectControl.less";
+//style for targetRange page
+@import "targetRange.less";
+@import "settings.less";
+@import "alarm.less";
+// base settings            顶部的高和侧边nav的宽度要和main的padding-top和padding-left定义成一样的所以定义两个变量方便改动
+//置顶登录超时的弹窗
+#loginModal {
+    z-index: 9999;
+}
+
+// ----------------------------------------------------分页公共样式 所有用到的分页都可以使用start
+.pagination-all {
+    width: 100%;
+    text-align: center;
+    height: 79px;
+    background-color: #252830;
+    font-size: 12px;
+}
+
+.pagination {
+    color: #eee;
+    vertical-align: middle; // background-color: #2e323c;
+    // border-radius: 20px;
+    padding-top: 4px;
+}
+
+
+/*页码框*/
+
+.pageNum {
+    vertical-align: middle;
+    /* text-align: center; */
+    border-radius: 4px;
+    padding-left: 10px;
+    width: 72px;
+    height: 24px;
+    background-color: #2e323c;
+}
+
+.searchNum {
+    cursor: pointer;
+    margin-left: 10px;
+    height: 24px;
+}
+
+.pageCount {
+    display: inline-block; // margin: 20px 0;
+    margin-left: 10px; // width:128px;
+    height: 24px; // border-radius: 20px;
+    // background-color: #2e323c;
+}
+
+.pagination li {
+    margin: 0 4px; // border-radius: 50%;
+}
+
+.pagination>li {
+    display: inline-block; // background: #2e323c;
+    // width: 40px;
+    height: 24px;
+}
+
+.pagination>li>a {
+    position: relative;
+    float: left;
+    padding: 4px 6px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #fff;
+    min-width: 24px; // height: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.pagination>li>a>span {
+    font-size: 26px; // color: #32a1ff;
+    line-height: 10px;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    background-color: #32a1ff;
+    cursor: default;
+    border-radius: 6px;
+}
+
+.pagination>.disabled>a,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>a:focus,
+.pagination>.disabled>span,
+.pagination>.disabled>span:hover,
+.pagination>.disabled>span:focus {
+    // color: #fff;
+    cursor: not-allowed;
+    background-color: transparent;
+    border-color: #32a1ff;
+    border-radius: 8px;
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    z-index: 2;
+    color: #23527c;
+    border-color: rgba(34, 186, 207, .3);
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+    background-color: transparent;
+    color: #fff;
+}
+
+.pagination .disabled {
+    background-color: transparent;
+    border-color: rgba(34, 186, 207, .2);
+}
+
+.custom-pagination{
+    text-align: initial;
+    .rowsPerPage{
+        float: left;
+        .my-dropdown-list {
+            width: 106px;
+            .item-selected {
+                width: 106px;                
+            }
+            .list-block {
+                width: 106px;
+            }
+        }
+        p.itemsCount{
+            display: inline-block;
+            margin-left: 8px;
+        }
+    }
+    .pagination-right{
+        float:right;
+        line-height: 38px;
+    }
+    .pagination {
+        padding-top: 0;
+        margin: 0;
+        height: 38px;
+        float: left;
+        &>li{
+            margin: 0;
+            height: 38px;
+            vertical-align: middle;
+            &:first-child a,&:last-child a{
+                width:38px;
+                height:38px;
+                background:#2e323e;
+                border-radius:4px;
+                border:1px solid #444851;
+            }
+            &:nth-child(2){
+                margin-left: 16px;
+            }
+            &:nth-last-child(2){
+                margin-right: 16px;
+            }
+        }
+        &>li>a {
+            position: initial;
+            float: none;
+            padding: 0;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 20px;
+            color: #A1A6AD;
+            min-width:20px;
+            height:20px;
+            font-size: 12px;
+            text-align: center; 
+            &>span {
+                font-size: 33px; // color: #32a1ff;
+                line-height: 29px;
+            }   
+        }
+        &>.active>a,
+        &>.active>a:focus,
+        &>.active>a:hover,
+        &>.active>span,
+        &>.active>span:focus,
+        &>.active>span:hover {
+            color: #DAE1E9;
+            background:#133E62;
+            border-radius:4px;
+            border:1px solid #007ae1;
+            line-height: 18px;
+        }
+        &>.disabled>a>span[aria-label='More']{
+            font-size: 12px;
+            color: #a1a6ad;
+            line-height: 18px;
+        }
+        
+    }   
+    .pageNum {
+        padding-left: 16px;
+        width: 64px;
+        height: 38px;
+        border: 1px solid #444851;
+        background: transparent;
+    } 
+    .searchNum {
+        margin-left: 8px;
+        width:56px;
+        height:38px;
+        background:#2e323c;
+        border-radius:4px;
+        border:1px solid #444851;
+        vertical-align: middle;
+    }
+    .pageCount {
+        margin-left: 24px; // width:128px;
+        height: 38px; // border-radius: 20px;
+        float:right;
+        .totalPages{
+            margin-left: 8px;
+        }
+    }
+}
+// --------------------------------------------------------------分页公共样式 所有用到的分页都可以使用end
+//---------------------------------------------------------------------------loadingText样式start
+.loadingText {
+    margin: 200px auto;
+    text-align: center;
+}
+
+.loadingText span {
+    height: 30px;
+    line-height: 30px;
+}
+
+.loadingText>div {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    margin-left: 5px;
+    border-radius: 100%;
+    display: inline-block;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    animation-fill-mode: both;
+}
+
+.loadingText .bounce1 {
+    animation-delay: -0.32s;
+}
+
+.loadingText .bounce2 {
+    animation-delay: -0.16s;
+}
+.loadingAction{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding:24% 0;
+    top:0;
+    background: rgba(0,0,0,.5);
+}
+table th, table td{
+    font-size: 12px;
+}
+@keyframes bouncedelay {
+    0%,
+    80%,
+    100% {
+        transform: scale(0.0);
+    }
+    40% {
+        transform: scale(1.0);
+    }
+}
+
+//----------------------------------------------------------------------loadingText样式-end
+@base-loading-color: #67CF22; //loading背景色
+@base-loading-width: 16px;
+//-------------------------------------------------------------------------------loading样式start
+.spinner {
+    margin: 35% auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.container1>div,
+.container2>div,
+.container3>div {
+    width: @base-loading-width;
+    height: @base-loading-width;
+    background-color: @base-loading-color;
+    border-radius: 100%;
+    position: absolute;
+    animation: bouncedelay 1.2s infinite ease-in-out;
+    animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container2 {
+    transform: rotateZ(45deg);
+}
+
+.container3 {
+    transform: rotateZ(90deg);
+}
+
+.circle1 {
+    top: 0;
+    left: 0;
+}
+
+.circle2 {
+    top: 0;
+    right: 0;
+}
+
+.circle3 {
+    right: 0;
+    bottom: 0;
+}
+
+.circle4 {
+    left: 0;
+    bottom: 0;
+}
+
+.container2 .circle1 {
+    animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+    animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+    animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+    animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+    animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+    animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+    animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+    animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+    animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+    animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+    animation-delay: -0.1s;
+}
+
+@keyframes bouncedelay {
+    0%,
+    80%,
+    100% {
+        transform: scale(0.0);
+    }
+    40% {
+        transform: scale(1.7);
+    }
+}
+
+//-------------------------------------------------------------------------------loading样式end
+//----------------------------------------------------------------------table
+
+/*全局自定义的checkbox样式
+  　使用方式：给　input标签加上custom-checkbox类名后面在跟个label标签，注意input要给id 并且跟后面label标签的for属性对应，（这里的htmlFor就是for关键字）
+  　列：  <input type="checkbox" id="checkbox-1-1" className="custom-checkbox" /><label htmlFor="checkbox-1-1"></label>
+    radio同checkbox
+    列： <input type="radio" id="radio-1-1" name="radio-1-set" className="custom-radio"  /><label htmlFor="radio-1-1"></label>
+*/
+
+// custom style checkbox  ----------------------------------自定义多选框start
+.custom-checkbox {
+    display: none;
+}
+
+.custom-checkbox+label {
+    background-color: transparent;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 7px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.custom-checkbox+label:active,
+.custom-checkbox:checked+label:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.custom-checkbox:checked+label {
+    background-color: #007ae1;
+    border: 1px solid #007ae1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+}
+
+// .custom-checkbox:checked+label:after {
+//     content: '\2714';
+//     font-size: 14px;
+//     position: absolute;
+//     top: -2px;
+//     left: 1px;
+//     color: green;
+// }
+
+label {
+    display: inline;
+}
+
+// custom style checkbox  ----------------------------------自定义多选框end
+
+/* custom style　RADIO    ---------------------------------- 自定义单选框start*/
+
+.custom-radio {
+    display: none;
+}
+
+.custom-radio+label {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 7px;
+    border-radius: 50px;
+    display: inline-block;
+    position: relative;
+}
+
+.custom-radio:checked+label:after {
+    content: ' ';
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    background: #99a1a7;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px;
+    left: 3px;
+    font-size: 32px;
+}
+
+.custom-radio:checked+label {
+    background-color: #e9ecee;
+    color: #99a1a7;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-radio+label:active,
+.custom-radio:checked+label:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* custom style　RADIO    ---------------------------------- 自定义单选框end*/
+
+
+/* 自定义了checkbox的样式
+  列：<input type="checkbox" className="switch switch-bg"/>
+  switch  是基础样式，在加上类名　switch-bg是添加动画效果　　　switch-transition 是另一种动画效果
+*/
+
+
+/*custom  switch  style  -----------------------------------------------自定义开关样式start*/
+
+.switch {
+    width: 52px;
+    height: 31px;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+}
+
+.switch:before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.switch:checked {
+    border-color: #64bd63;
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63;
+}
+
+.switch:checked:before {
+    left: 21px;
+}
+
+.switch.switch-bg {
+    transition: background-color ease 0.4s;
+}
+
+.switch.switch-bg:before {
+    transition: left 0.3s;
+}
+
+.switch.switch-bg:checked {
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    background-color: #64bd63;
+    transition: border-color 0.4s, background-color ease 0.4s;
+}
+
+.switch.switch-bg:checked:before {
+    transition: left 0.3s;
+}
+
+.switch.switch-transition {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+}
+
+.switch.switch-transition:before {
+    transition: left 0.3s;
+}
+
+.switch.switch-transition:checked {
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63;
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+}
+
+.switch.switch-transition:checked:before {
+    transition: left 0.3s;
+}
+
+
+/*custom  switch  style  -----------------------------------------------自定义开关样式end*/
+
+
+/*自定义消息提示框--------------------------------------------------------------------start*/
+
+// 页面交互弹窗
+@msgBoxWidth: 300px;
+@msgBoxTopMargin: -100px;
+@btnMsgBoxWidth: 120px;
+@btnMsgBoxHeight: 40px;
+@msgContentMaxHeight: 260px;
+.messageBox-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    .messageBox {
+        width: @msgBoxWidth;
+        text-align: center;
+        background: #202129;
+        color: #fff;
+        left: 50%;
+        top: 50%;
+        margin-left: -@msgBoxWidth/2;
+        margin-top: @msgBoxTopMargin;
+        position: relative;
+        border-radius: 4px;
+        .msgContent {
+            text-align: center;
+            line-height: 30px;
+            padding: 20px 20px;
+            margin: 0;
+            word-wrap: break-word;
+            margin: 0 0 20px;
+            max-height: @msgContentMaxHeight;
+            overflow-y: auto;
+        }
+        .btnMsgBox {
+            margin-bottom: 20px;
+            width: @btnMsgBoxWidth;
+            height: @btnMsgBoxHeight;
+            line-height: @btnMsgBoxHeight;
+            background: #A3A3A3;
+            color: #F3F3F3;
+            border-radius: 4px;
+            cursor: not-allowed;
+        }
+        .btnOkMsgBox {
+            cursor: pointer;
+            background: @btn-bg-deep;
+            color: @font-color-white;
+        }
+    }
+}
+
+
+/*自定义消息提示框--------------------------------------------------------------------end*/
+
+
+/*自定义下拉列表组件的样式--------------------------------------------------------------------start*/
+
+.my-dropdown-list {
+    position: relative;
+    width: 126px;
+    display: inline-block;
+    font-size: 12px; //下拉列表右边的小箭头图标
+    background: #2E323C;
+    .select-img {
+        // width: 7px;
+        // height: 4px;
+        // background: url("../img/icons.png") no-repeat -129px -191px;
+        position: absolute;
+        right: 16px;
+        top: 11px;
+        z-index: 6;
+        font-size: 16px;
+        color: #DAE1E9;
+
+    } //当前已选中的选项
+    .item-selected {
+        width: 126px;
+        height: 38px;
+        border-radius: 4px;
+        // border: 1px solid #ccc;
+        background-color: transparent;
+        // color: #fff;
+        // padding: 6px 10px;
+        cursor: default;
+        border: 1px solid #444851;
+        color: #DAE1E9;
+        padding: 10px 16px;
+        &:hover {
+            border-color: #66afe9;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        }
+    }
+    .select-img:hover+.item-selected {
+        border-color: #66afe9;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    } //下拉列表的选项框 
+    .list-block {
+        position: absolute;
+        width: 126px;
+        border: 1px solid #444851;
+        border-top: 0;
+        border-radius: 4px;
+        background-color: #202129;
+        color: #DAE1E9;
+        z-index: 8;
+        ul {
+            margin-bottom: 6px;
+            li {
+                padding: 6px 6px 0 6px;
+                cursor: pointer;
+                &.active {
+                    background-color: #007ae1;
+                }
+                &:hover {
+                    background-color: #2e323c;
+                }
+                span:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+/*自定义下拉列表--------------------------------------------------------------------end*/
+
+/*自定义Modal样式--------------------------------------------------------------------start*/
+.modal-header {
+    border-color: #444851;
+}
+.modal-footer {
+    border-color: #444851;
+}
+button.close {
+    color: #A1A6AD;
+}
+/*自定义Modal样式--------------------------------------------------------------------end*/
+
+/*仪表盘 DynamicGauge 组件的默认样式---------------------------------------------------start*/
+.dynamic-gauge{
+    .gauge-title{
+        font-size: 10px;
+        fill: #A1A6AD;
+        letter-spacing: -0px;
+    }
+    .gauge-value{
+        font-size: 12px;
+        fill: #FFFFFF;
+        letter-spacing: 0;
+    }
+    .gauge-unity{
+        font-size: 10px;
+        fill: #F28321;
+        letter-spacing: -0px;
+    }
+}
+/*仪表盘 DynamicGauge 组件的默认样式---------------------------------------------------start*/
+
+/*自定义开关按钮ToggleButton组件的默认样式--------------------------------------------------start*/
+@tg-btn-width: 24px;
+@tg-btn-height: 14px;
+@tg-btn-on-background: #F28321;
+@tg-btn-off-background: transparent;
+@tg-btn-slider-left:3px;
+@tg-btn-slider-width:8px;
+@tg-btn-slider-height:8px;
+@tg-btn-slider-translateX:@tg-btn-width - @tg-btn-slider-width - 2*@tg-btn-slider-left;
+.custom-toggle-btn {
+    position: relative;
+    display: inline-block;
+    width: @tg-btn-width;
+    height: @tg-btn-height;
+    border: 1px solid #FFFFFF;
+    border-radius: 1px;
+    input {
+        display: none;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: @tg-btn-off-background;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        width: @tg-btn-slider-width;
+        height: @tg-btn-slider-height;
+        left: @tg-btn-slider-left;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 1px;
+    }
+
+    input:checked+.slider {
+        background-color: @tg-btn-on-background;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px @tg-btn-on-background;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(@tg-btn-slider-translateX);
+        -ms-transform: translateX(@tg-btn-slider-translateX);
+        transform: translateX(@tg-btn-slider-translateX);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: @tg-btn-height;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    label{
+        margin:0;
+    }
+}
+/*自定义开关按钮ToggleButton组件的默认样式--------------------------------------------------end*/

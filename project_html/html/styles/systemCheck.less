@@ -1,0 +1,945 @@
+.systemCheck {
+    color: #fff
+}
+
+/* 系统检测头部的style*/
+
+.sysHeader {
+    // position: fixed;
+    // right: 0px;
+    // z-index: 11;
+    // height: 139px;
+    // width: 100%;
+    // background: #2e323c;
+    // padding: 24px;
+    // padding-left: 264px;
+    // float: left;
+    /* 头部左边style*/
+    header {
+        height: 86px;
+        background-color: #2e323c;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        padding-left: 240px;
+        z-index: 9;
+    }
+    .sysHeader-title {
+        font-size: 20px;
+        color: #FFFFFF;
+        padding: 38px 0 0 24px;
+    }
+    .protectControl-content {
+        margin: 0;
+        border: 1px solid #444851;
+        background: #252830;
+        border-radius: 4px;
+        .content-title {
+            // border-bottom: 1px solid #444851;
+            // color: #a3a3a3;
+        }
+        .btns-group {
+            margin: 24px;
+            .btn>i {
+                margin-right: 5px;
+                font-size: 16px;
+                position: relative;
+                left: -2px;
+                top: 2px;
+            }
+            .btn-group-left {
+                float: left;
+                .sys-select-all {
+                    float: left;
+                    padding: 10px 16px;
+                    font-size: 12px;
+                    color: #DAE1E9;
+                    height: 38px;
+                    background: #2E323C;
+                    border-radius: 4px;
+                    border: 1px solid #444851;
+                    margin-left: 24px;
+                    cursor: pointer;
+                    margin-left: 24px;
+                }
+                .check-type-host {
+                    margin-right: 24px;
+                    float: left;
+                    height: 38px;
+                    background: rgba(46, 50, 60, 1);
+                    border-radius: 4px;
+                    border: 1px solid rgba(68, 72, 81, 1);
+                    box-sizing: border-box;
+                    padding: 4px;
+                    >div {
+                        float: left;
+                        height: 28px;
+                        padding: 6px 8px;
+                        font-size: 12px;
+                        font-family: PingFangSC-Regular;
+                        color: rgba(218, 225, 233, 1);
+                    }
+                    >div.active {
+                        background: rgba(19, 62, 98, 1);
+                        border-radius: 4px;
+                        border: 1px solid rgba(0, 122, 225, 1);
+                    }
+                    >div:first-child {
+                        margin-right: 10px;
+                    }
+                }
+                form {
+                    float: left;
+                    margin: 0
+                }
+            }
+            .btn-group-search {
+                color: #A1A6AD;
+                font-size: 12px;
+                display: inline-block;
+                float: right;
+                >button {
+                    margin-left: 8px;
+                }
+                >button.big-space {
+                    margin-left: 24px;
+                }
+            }
+            .input-search {
+                display: inline-block;
+                vertical-align: middle;
+                width: 270px;
+                height: 38px;
+                margin: 0;
+                border-radius: 4px;
+                font-size: 12px;
+                border: 1px solid rgba(68, 72, 81, 1);
+            }
+            .btn-pause-protection,
+            .btn-search {
+                margin-left: 8px;
+            }
+        }
+        table {
+            font-size: 12px;
+            width: 100%;
+            thead tr {
+                background-color: transparent;
+            }
+            tbody {
+                width: 100%;
+            }
+            tbody tr {
+                border-bottom: 1px solid #444851;
+            }
+            tbody tr:nth-child(1) {
+                border-top: 1px solid #444851;
+            }
+            tbody tr:nth-child(2n) {
+                background-color: transparent;
+            }
+            tbody tr:nth-child(2n+1) {
+                background-color: #282C35;
+            }
+            thead>tr>th>.fa {
+                margin-left: 8px;
+                cursor: pointer;
+            }
+            .custom-checkbox+label {
+                margin-right: 24px;
+                margin-bottom: 4px;
+                cursor: pointer;
+                vertical-align: middle;
+            }
+            .hostlist-detail {
+                td {
+                    width: 15%;
+                }
+                .hostlist-status {
+                    color: white;
+                    i {
+                        margin-left: 0;
+                    }
+                }
+                .hostlist-hostip,
+                .hostlist-maintenance {
+                    color: white;
+                    .fa-share-square-o {
+                        margin-right: 8px;
+                    }
+                }
+                .hostlist-hostname {
+                    min-width: 150px;
+                    max-width: 150px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .hostlist-hostip,
+                .hostlist-status,
+                .hostlist-maintenance {
+                    min-width: 110px;
+                   
+                }
+                .hostlist-status{
+                    padding-left: 66px;
+                }
+                .hostlist-status .circle {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 16px;
+                    margin-right: 8px;
+                    &.status-yes {
+                        background-color: #133E62;
+                        border: 1px solid #007AE1;
+                    }
+                    &.status-no {
+                        background-color: #5E1717;
+                        border: 1px solid #BF2424;
+                    }
+                }
+                .hostlist-maintenance {
+                    cursor: pointer;
+                }
+                .hostlist-details {
+                    color: #32A1FF;
+                    cursor: pointer;
+                    float: right;
+                    margin-right: 24px;
+                }
+                .hostlist-remark {
+                    max-width: 282px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .hostlist-description {
+                    min-width: 150px;
+                    .hostlist-start {
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        background: #9F86FF;
+                        border: 1px solid #D3C7FF;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        .hostlist-triangle {
+                            width: 0;
+                            height: 0;
+                            margin: 5px auto 0;
+                            border-left: 6px solid white;
+                            border-top: 5px solid transparent;
+                            border-bottom: 5px solid transparent;
+                        } //未受到保护主机的ui
+                        &.no-protect {
+                            background: #252830;
+                            border: 1px solid #444851;
+                            border-radius: 4px;
+                            .hostlist-triangle {
+                                width: 0;
+                                height: 0;
+                                margin: 5px auto 0;
+                                border-left: 6px solid #444851;
+                                ;
+                                border-top: 5px solid transparent;
+                                border-bottom: 5px solid transparent;
+                            }
+                        }
+                    }
+                    .hostlist-termination {
+                        margin-left: 10px;
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        background: #252830;
+                        border: 1px solid #444851;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        .hostlist-square {
+                            width: 10px;
+                            height: 10px;
+                            margin: 6px auto 0;
+                            background-color: #444851;
+                        }
+                    }
+                    &.killing {
+                        .hostlist-killing {
+                            display: inline-block;
+                            color: #A1A6AD;
+                            position: relative;
+                            bottom: 8px;
+                            left: 5px;
+                        }
+                        .hostlist-start {
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            background: #252830;
+                            border: 1px solid #444851;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            .hostlist-triangle {
+                                width: 0;
+                                height: 0;
+                                margin: 5px auto 0;
+                                border-left: 6px solid #444851;
+                                border-top: 5px solid transparent;
+                                border-bottom: 5px solid transparent;
+                            }
+                        }
+                        .hostlist-termination {
+                            margin-left: 10px;
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            background: #CB4B4B;
+                            border: 1px solid #FFA1A1;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            .hostlist-square {
+                                width: 10px;
+                                height: 10px;
+                                margin: 6px auto 0;
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#add-servers,
+#edit-servers {
+    form {
+        input {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            margin-top: 10px;
+            width: 100%;
+            height: 152px;
+            border: 1px solid #D9D9D9;
+            border-radius: 4px;
+            background-color: transparent;
+            padding-left: 10px;
+            padding-top: 8px;
+        }
+    }
+    .modal-content {
+        width: 555px;
+        margin: auto;
+        button {
+            margin-left: 20px;
+        }
+        .modal-body {
+            label {
+                font-size: 12px;
+                color: #A1A6AD;
+                font-family: PingFangSC-Regular;
+            }
+        }
+    }
+}
+
+.scanTitle {
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #A1A6AD;
+    margin-bottom: 8px;
+}
+
+#scan-setting {
+    .modal-content {
+        width: 660px;
+        margin: auto;
+        button {
+            margin-left: 20px;
+        }
+    }
+    .noScan {
+        .noScanList {
+            margin: 10px 0 20px;
+            .noScanList-item {
+                display: inline-block;
+                width: 25%;
+                span {
+                    position: relative;
+                    top: -9px;
+                    left: 10px;
+                }
+                label {
+                    top: 8px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .scanPort {
+        input {
+            display: inline-block;
+            width: 164px;
+            height: 38px;
+        }
+        .scanSome {
+            line-height: 64px;
+        }
+        .scanIp {
+            span:nth-child(1) {
+                margin-right: 25px;
+            }
+        }
+    }
+    .updateSetting {
+        .updateFrequency {
+            input {
+                margin-left: 10px;
+                width: 108px;
+                height: 38px;
+                display: inline-block
+            }
+        }
+        p {
+            >label {
+                position: relative;
+                top: 8px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.details-host {
+    font-family: PingFangSC-Regular;
+    padding: 0 24px;
+    .content-title {
+        margin: 24px 0 16px 0 !important;
+    }
+    .host-status {
+        height: 80px;
+        background: #202129;
+        border-radius: 4px;
+        margin: 20px 0 15px;
+        padding: 20px 20px 30px;
+        .status-img {
+            float: left;
+        }
+        .host-scan-des {
+            float: left;
+            margin-left: 20px;
+            &>div:nth-child(1) {
+                margin-top: 5px;
+                font-size: 16px;
+            }
+            &>div:nth-child(2) {
+                font-size: 12px;
+                color: #A1A6AD;
+            }
+        }
+        .termination-scan {
+            float: right;
+            width: 120px;
+            height: 38px;
+            border-radius: 4px;
+        }
+    }
+    .host-detail-table {
+        border: 1px solid #444851;
+        thead tr th {
+            font-size: 12px;
+            color: #A1A6AD;
+            line-height: 16px;
+            padding: 8px;
+            line-height: 24px;
+            background: #252830;
+            border: 1px solid #444851;
+        }
+        tbody tr td {
+            border: 1px solid #444851;
+            padding: 8px;
+            background: #2E323C;
+            color: #fff;
+        }
+    }
+    .killing-log {
+        .killing-log-title {
+            font-family: PingFangSC-Regular;
+            font-size: 12px;
+            color: #A1A6AD;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #2E323C;
+            border: 1px solid #444851;
+            font-family: Courier;
+            font-size: 12px;
+            color: #FFFFFF;
+            height: 363px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.affirm-table {
+    .affirm-detail {
+        .hostlist-remark {
+            max-width: 380px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+    }
+    label {
+        position: relative;
+        top: 3px;
+        left: -9px;
+        margin: 0px;
+    }
+}
+
+// 任务计划管理器
+.schtasks-ctl {
+    margin: 24px;
+    >form {
+        float: left;
+        #schtasks-search {
+            float: left;
+            display: inline-block;
+            vertical-align: middle;
+            width: 270px;
+            height: 38px;
+            margin: 0;
+            border-radius: 4px;
+            font-size: 12px;
+            border: 1px solid #444851
+        }
+        .sys-select-all {
+            float: left;
+            padding: 10px 16px;
+            font-size: 12px;
+            color: #DAE1E9;
+            height: 38px;
+            background: #2E323C;
+            border-radius: 4px;
+            border: 1px solid #444851;
+            margin-left: 24px;
+            cursor: pointer;
+            margin-left: 24px;
+        }
+        >button {
+            float: left;
+            margin-left: 8px;
+        }
+    }
+    .schtasks-action {
+        float: right;
+        >button {
+            margin-left: 10px;
+        }
+    }
+}
+
+.pagination-all {
+    padding: 0 24px;
+    font-size: 12px;
+    color: #A1A6AD;
+    background-color: #252830;
+    margin-top: 48px;
+    .pagination-left {
+        float: left;
+        display: inline-block;
+        .my-dropdown-list {
+            width: 84px;
+            margin: 0 10px 0 5px;
+            input {
+                width: 84px;
+                .select-img {
+                    right: 28px;
+                    top: 16px;
+                }
+            }
+            .list-block {
+                width: 84px;
+            }
+        }
+    }
+    .pagination-right {
+        float: right;
+        display: inline-block;
+        line-height: 38px;
+        form {
+            display: inline-block;
+        }
+        .pagination-page {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            background: #2E323C;
+            border-radius: 4px;
+            border: 1px solid #444851;
+            margin: 0 8px;
+            cursor: pointer;
+        }
+        .pagination-inputnum {
+            text-align: center;
+            padding: 0 2px;
+            display: inline-block;
+            margin-right: 5px;
+            width: 64px;
+            height: 38px;
+            border-radius: 4px;
+            background-color: transparent;
+            border: 1px solid #444851;
+        }
+    }
+}
+
+.not-allowed {
+    cursor: not-allowed !important;
+    background-color:#202129 !important;
+    border:1px solid #444851 !important;
+    i{
+        color: #6C7683 !important;
+    }
+}
+
+#groupDetail {
+    .modal-dialog {
+        width: 1152px;
+        margin-top: 50px;
+    }
+    .modal-header {
+        padding: 0px;
+        padding-bottom: 16px;
+        color: #A1A6AD;
+        font-size: 14px;
+    }
+    .modal-footer {
+        border: none;
+    }
+    .modal-content {
+        padding: 24px;
+        background: #252830;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.57);
+        border-radius: 4px;
+        .modal-body {
+            padding: 0px;
+            padding-top: 24px;
+            label {
+                font-size: 12px;
+                color: #fff;
+                line-height: 17px;
+                margin-bottom: 8px;
+                input {
+                    margin-bottom: 24px;
+                    width: 270px;
+                    height: 38px;
+                    border-radius: 4px;
+                    border: 1px solid rgba(68, 72, 81, 1);
+                }
+            }
+        }
+        .line {
+            width: 100%;
+            height: 1px;
+            background: #444851;
+            margin: 48px 0 24px;
+        }
+        .group-host {
+            font-size: 12px;
+            .brdige {
+                float: left;
+                width: 68px;
+                min-height: 580px;
+                position: relative;
+                >div {
+                    position: absolute;
+                    top: 120px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 40px;
+                    height: 160px;
+                    >div {
+                        width: 38px;
+                        height: 38px;
+                        border-radius: 4px;
+                    }
+                    .brdige-right {
+                        position: absolute;
+                        top: 0;
+                        background: #133E62;
+                        border: 1px solid #007AE1;
+                    }
+                    .brdige-left {
+                        position: absolute;
+                        bottom: 0;
+                        background: #5E1717;
+                        border: 1px solid #BF2424;
+                    }
+                }
+            }
+            .outside-group,
+            .inside-group {
+                float: left;
+                .group-table {
+                    box-sizing: border-box;
+                    width: 517px;
+                    height: 580px;
+                    overflow-y: auto;
+                    background: #202129;
+                    border-radius: 4px;
+                    border: 1px solid #444851;
+                }
+                .hostlist-table {
+                    width: 100%;
+                    label {
+                        margin: 2px 10px -2px 10px;
+                    }
+                    thead th,
+                    tbody td {
+                        height: 36px !important;
+                        box-sizing: border-box;
+                        padding: 4px 0 !important;
+                    }
+                }
+            }
+            form {
+                margin-top: 24px;
+                margin-bottom: 16px;
+                input {
+                    padding: 6px 10px;
+                    float: left;
+                    width: 471px;
+                    height: 38px;
+                    background-color: transparent;
+                    border-radius: 4px;
+                    border: 1px solid #444851;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+#addtaskPlan {
+    font-size: 12px;
+    width: 100%;
+    thead tr {
+        background-color: transparent;
+    }
+    tbody {
+        width: 100%;
+    }
+    tbody tr {
+        border-bottom: 1px solid #444851;
+    }
+    tbody tr:nth-child(1) {
+        border-top: 1px solid #444851;
+    }
+    tbody tr:nth-child(2n) {
+        background-color: transparent;
+    }
+    tbody tr:nth-child(2n+1) {
+        background-color: #282C35;
+    }
+    thead>tr>th>.fa {
+        margin-left: 8px;
+        cursor: pointer;
+    }
+    table th,
+    table td {
+        padding: 10px 20px
+    }
+    .slcGroup {
+        margin-bottom: 16px; // background: #2E323C;
+    }
+    .modal-dialog {
+        width: 662px;
+        height: 779px;
+        margin-top: 50px;
+    }
+    .modal-header {
+        padding: 0px;
+        padding-bottom: 16px;
+        color: #A1A6AD;
+        font-size: 14px;
+    }
+    .modal-footer {
+        border: none;
+    }
+    .modal-content {
+        position: relative;
+        padding: 24px;
+        background: #252830;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.57);
+        border-radius: 4px;
+        .modal-body {
+            padding: 0px;
+            padding-top: 24px;
+            .line {
+                width: 100%;
+                height: 1px;
+                background: #444851;
+                margin: 12px 0 0px;
+            }
+            .task-step {
+                color: #6C7683;
+                font-size: 12px;
+                margin-bottom: 48px;
+                background: url('../../app_fuzhou/static/img/systemCheck/step1.png') 100% 100%;
+                li {
+                    float: left;
+                    width: 33.33%;
+                    height: 60px;
+                    cursor: pointer;
+                    >div {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .stepHostlist,.stepGrouplist{ 
+                height: 460px;
+                overflow-y: scroll;
+            }
+            .step-content {
+                // display: none;
+                height: 565px;
+                position: relative;
+                li {
+                    display: block;
+                    opacity: 1;
+                }
+                .active {
+                    opacity:block;
+                }
+                .step-footer {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 8px;
+                    right: 0;
+                    >button {
+                        float: right;
+                        margin-left: 24px;
+                    }
+                }
+            }
+            .task-file,
+            .port-set {
+                font-size: 12px;
+                color: #fff;
+                >p {
+                    color: #A1A6AD;
+                }
+                .noScanList {
+                    margin: 10px 0 20px;
+                    .noScanList-item {
+                        display: inline-block;
+                        width: 33.33%;
+                        span {
+                            position: relative;
+                            top: -9px;
+                            left: 10px;
+                        }
+                        label {
+                            top: 8px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            .task-file-name,.task-file-remark{
+                border: 1px solid #444851;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                width: 250px;
+            }
+            .scanPath{
+                border: 1px solid #444851;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            .task-file-remark{
+                max-height: 85px;
+                resize:vertical; 
+            }
+        }
+    }
+}
+
+
+
+
+
+.performlist{
+    margin-top: 48px;
+    .perfrom-title{
+        margin-bottom: 16px;
+    }
+
+    .perfrom-content{
+        width:612px;
+        height:374px;
+        background:#202129;
+        border-radius:4px;
+        border:1px solid #444851;
+        overflow: auto;
+        form{
+            width: 100%;
+            height:62px;
+            background:#252830;
+            input{
+                color:#FEFEFE;
+                background-color: transparent;
+            }
+        }
+        .perfrom-plus-template1,.perfrom-plus-template2,.perfrom-plus-template3{
+            display: none;
+        }
+        .perform-plus-item{
+            width:100%;
+            height:62px;
+            line-height: 62px;
+            background:#282C35;
+            border-radius:4px 4px 0px 0px;
+            border-bottom: 1px solid #444851;
+            color:#A1A6AD;
+            input{
+                width:72px;
+                height:38px;
+                border-radius:4px;
+                border:1px solid #444851;
+                background-color: transparent;
+                margin: 12px 8px 12px 12px;
+                padding: 0 16px;
+            }
+            button{
+                margin: 12px 8px 12px 12px;
+                float: right;
+                width:38px;
+                height:38px;
+                background:#2E323C;
+                border-radius:4px;
+                border:1px solid #444851;
+                position: relative;
+                i{  
+                    position: absolute;
+                    top:14px;
+                    left: 14px;
+                }
+            
+            }
+        }
+     
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/sidebar/svn</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/sidebar/svn" fill="#A1A6AD">
+            <path d="M17,5 L17,8 C17,9.65685425 13.8659932,11 10,11 C6.13400675,11 3,9.65685425 3,8 L3,5 C3,6.65685425 6.13400675,8 10,8 C13.8659932,8 17,6.65685425 17,5 Z" id="Combined-Shape"></path>
+            <path d="M17,9 L17,12 C17,13.6568542 13.8659932,15 10,15 C6.13400675,15 3,13.6568542 3,12 L3,9 C3,10.6568542 6.13400675,12 10,12 C13.8659932,12 17,10.6568542 17,9 Z" id="Combined-Shape-Copy"></path>
+            <path d="M17,13 L17,16 C17,17.6568542 13.8659932,19 10,19 C6.13400675,19 3,17.6568542 3,16 L3,13 C3,14.6568542 6.13400675,16 10,16 C13.8659932,16 17,14.6568542 17,13 Z" id="Combined-Shape-Copy-2"></path>
+            <ellipse id="Oval-5" cx="10" cy="4" rx="7" ry="3"></ellipse>
+        </g>
+    </g>
+</svg>

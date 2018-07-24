@@ -1,0 +1,634 @@
+// 攻防靶场页面的样式
+.target-range{
+    @page-margin:0px;  
+    @panel-padding:8px; 
+    //半透明面板的左部
+    @left-container-width:300px;
+    @left-container-height:680px;
+    //半透明面板的右部
+    @right-container-width:520px;
+    @right-container-top-height: @top-header-height + @corner-width;
+    @right-container-bottom-height: @corner-width;
+    @right-container-mid-height: calc(~"100% - @{right-container-top-height} - @{right-container-bottom-height}");
+    //半透明面板的顶部
+    @top-header-height:31px;    
+    @corner-width: 40px;    //边框三角的直角边的长度
+    
+
+    position: relative;
+    width: calc(~"100vw - @{page-margin} - @{page-margin}");
+    height: calc(~"100vh - @{page-margin} - @{page-margin}");
+    z-index: 999;
+    background-color: #202129;
+    border:1px solid #000000;
+    box-shadow: -3px 2px 15px #000000;
+    margin: @page-margin;
+    overflow: hidden;
+    .healthy-percentage{
+        position:absolute;        
+        left:16px;
+        bottom:28px;
+        width:188px;
+        .title{
+            font-size: 12px;
+            color: #ffffff;
+            background: #F28321;
+            margin:0;
+            height:20px;
+            padding-left: 8px;
+        }
+        .value{
+            height: 54px;
+            font-size: 48px;
+            color: #FFFFFF;
+            line-height: 50px;
+            text-align: center;
+            margin:0;            
+            border-left:1px solid #A1A6AD;
+            border-right:1px solid #A1A6AD;
+        }
+    }
+    //左边的半透明面板的内容部分，包含背景图
+    .left-content-container{
+        float:left;
+        width:@left-container-width + @corner-width;
+        height:@left-container-height;
+        position: relative;
+        background-image:url("../img/part_left.png");
+        padding:@top-header-height @corner-width+@panel-padding @corner-width @panel-padding; 
+        .company{
+            margin-bottom:20px;
+            width: 100%;
+            .copyright{               
+                font-size: 10px;
+                color: #A1A6AD;
+                width:14em;
+                height:28px;
+                word-wrap: break-word;
+                float: right;
+            }
+        }
+        .parameters{
+            border-bottom:1px solid #F28321;
+            margin-bottom: @panel-padding;
+        }
+        .parameter{
+            padding:@panel-padding/2;
+            display: inline-block;
+            width:138px;
+            height:76px;
+            background: #2E323C;
+            &:nth-child(2n+1){
+                margin-right: @panel-padding;                
+            }
+            margin-bottom: @panel-padding;
+            .corner-box{
+                .title{
+                    height:16px;
+                    background: url("../img/pattern.png") repeat-x;
+                    p{
+                        float:left;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        height: 15px;
+                        font-size: 10px;
+                        text-align: center;
+                        line-height: 16px;
+                        color: #FFFFFF;
+                        background: #444851;
+                    }
+                }
+                .value{
+                    position: relative;
+                    height:30px;
+                    margin-top: @panel-padding;
+                    margin-bottom: @panel-padding/2;
+                    border-bottom:1px solid #444851;
+                    >div{
+                        display: inline-block;
+                        height:100%;
+                    }
+                    div:first-child{
+                        position: absolute;
+                        left:0;
+                        width:74px;
+                        font-size: 30px;
+                        color: #FFFFFF;
+                        line-height: 30px;
+                    }
+                    div:last-child{
+                        position: absolute;
+                        right:0;
+                        width: 45px;
+                    }
+                    .unity{
+                        height: 14px;
+                        margin: 0;
+                        font-size: 10px;
+                        color: #A1A6AD;
+                        text-align: right;
+                    }
+                    .percentage{
+                        height: 14px;
+                        margin: 0;
+                        font-size: 10px;
+                        color: #F28321;
+                        text-align: right;
+                        .fa{
+                            margin-right: 2px;
+                        }
+                    }
+                }
+            } 
+        }  
+              
+    }
+    //右边的半透明面板的内容部分，而背景用另外的div单独设置。
+    .right-content-container{
+        float:right;
+        width:@right-container-width;
+        height:calc(~"100vh - @{page-margin} - @{page-margin} - @{corner-width}");  
+        padding:@top-header-height @panel-padding 0 2*@panel-padding;  
+        overflow-y: auto;
+        position: relative;                   
+        .corner-box.table{
+            // width: 496px;
+            margin-bottom: 0;
+        }
+        .charts{
+            margin:12px 0;
+            padding:12px 0;
+            border-bottom:1px solid #F28321;            
+            .host-info,.host-info-extra{
+                display: inline-block;
+                height: 129px;
+            }
+            .gauge-1, .gauge-2, .gauge-3, .line-chart{
+                display: inline-block;
+                height: 115px;
+            }
+            .gauge-1, .gauge-2, .gauge-3{
+                width:75px;
+                margin-left:5px;
+                padding-top: 7px;
+            }
+            .host-info{
+                width:230px;
+                padding:6px;
+                background: #2E323C;  
+                float:left;  
+                .corner-box{
+                    height: 117px;    
+                    img{
+                        margin:3px 8px 0 3px;
+                    }  
+                    .host-detail{
+                        float: right;
+                        width:153px;
+                        p{
+                            margin:0;
+                        }
+                        .host-name{
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 20px;
+                            margin-bottom: 4px;
+                            height:40px;
+                            word-wrap: break-word;
+                            word-break: break-all;
+                        }
+                        .host-ip{
+                            height: 16px;
+                            background: url("../img/pattern.png") repeat-x;
+                            border-bottom: 1px solid #F28321;
+                            margin-bottom: 2px;
+                            p{
+                                float:left;
+                                height: 15px;
+                                padding-left:8px;
+                                padding-right: 8px;
+                                font-size: 10px;
+                                text-align: center;
+                                line-height: 16px;
+                                color: #FFFFFF;
+                                background: #444851;
+                            }
+                        }
+                        .label-btn{
+                            margin-top:10px;
+                            height:14px;
+                            label{
+                                font-size: 10px;
+                                color: #FFFFFF;
+                                margin:0;
+                                vertical-align: middle;
+                            }
+                        }
+                        
+                        .description{
+                            font-size: 10px;
+                            color: #FFFFFF;
+                        }
+                    }
+                }  
+            }   
+            .host-info-extra{
+                width:230px;
+                margin-left: 16px;
+                border-bottom:1px solid #F28321;
+                .title{
+                    height:16px;
+                    background: url("../img/pattern.png") repeat-x;
+                    border-bottom:1px solid #F28321;
+                    p{
+                        float:left;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        height: 15px;
+                        font-size: 10px;
+                        text-align: center;
+                        line-height: 16px;
+                        color: #FFFFFF;
+                        background: #444851;
+                        margin:0;
+                    }
+                }
+                .content{
+                    width: 220px;
+                    height: 85px;
+                    >dl{
+                        padding-top: 2px;
+                        margin-bottom: 0;
+                        border-bottom: 1px solid #444851;
+                        >dt, >dd{
+                            display: inline-block;
+                            font-size: 10px;
+                            height: 16px;
+                            vertical-align: text-top;
+                        }
+                        >dt{
+                            width: 100px;
+                            color: #A1A6AD;
+                        }
+                        >dd{
+                            width: 119px;
+                            color: #F28321;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    >dl:nth-child(3){
+                        >dd{
+                            height:32px;
+                            word-wrap: break-word;
+                            word-break: break-all;
+                            white-space: pre-wrap;
+                        }
+                    }
+                }                
+                .btn-mark{
+                    background: #2E323C;
+                    border: 1px solid #A1A6AD;
+                    border-radius: 2px;
+                    width: 68px;
+                    height: 20px;
+                    font-size: 10px;
+                    color: #FFFFFF;
+                    line-height: 8px;
+                }
+            }         
+            .line-chart{
+                width: 230px;
+                margin-top:17px;
+            }
+        }
+        .information{
+            padding: 6px;
+            background: #2E323C;
+            height:calc(~"100% - 604px");;   
+            min-height: 260px;
+            .corner-box{  
+                height:100%;
+                #scrollHostLog{
+                    overflow: hidden;
+                    height:100%; 
+                    p{
+                        font-size: 10px;
+                        color: #FFFFFF;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                        white-space: pre-wrap;
+                    }   
+                }                
+            }         
+        }
+        
+    }
+    //例子动画部分
+    #particlesContainer{
+        position:absolute;
+    }
+    //顶部的半透明面板
+    .background-container-header{
+        position:absolute;        
+        left:@left-container-width + @corner-width;
+        width:calc(~"100% - @{left-container-width} - @{corner-width}*2 - @{right-container-width}");
+        height:@top-header-height;
+        background-color:rgba(37, 39, 48, 0.9);
+        border-bottom:1px solid #6d7178;
+    }
+    //底部的半透明面板
+    .background-container-bottom{
+        position:absolute;        
+        left:16px;
+        bottom: 12px;
+        height:6px;
+        width:calc(~"100% - @{corner-width} - @{right-container-width} - 32px");
+        .left{
+            position:absolute;
+            width:32px;
+            height:5px;
+            background-image: url("../img/decoration_BL.png");
+        }
+        .center{
+            position:absolute;
+            left:32px;
+            height:5px;            
+            width:calc(~"100% - 64px");
+            background: url("../img/decoration_BM.png") repeat-x;
+        }
+        .right{
+            position:absolute;
+            right:0;
+            height:5px;
+            width:32px;
+            background-image: url("../img/decoration_BR.png");
+        }
+    }
+    //右部的半透明面板的上部背景
+    .background-container-right-top{
+        position:absolute;      
+        right:0;
+        height:@right-container-top-height;
+        width:@right-container-width + @corner-width;
+        background-image:url("../img/part_rightTop.png");
+        // border-bottom:1px solid #a1a6ad;
+    }
+    //右部的半透明面板的中部背景，用一像素高度的背景图重复铺成。
+    .background-container-right-mid{
+        position:absolute;        
+        top:@right-container-top-height;
+        right:0;
+        width:@right-container-width;
+        height:@right-container-mid-height;
+        background:url("../img/part_rightMid.png") repeat-y;
+    }
+    //右部的半透明面板的底部背景
+    .background-container-right-bottom{
+        position:absolute;        
+        bottom:0;
+        right:0;
+        width:@right-container-width + @corner-width;
+        height:@right-container-bottom-height;
+        background:url("../img/part_rightBottom.png");
+    }
+
+    //有四个角的容器
+    .corner-box{
+        position: relative;
+        padding: 5px;
+        &:before, &:after, >div:before, >div:after{
+            content:"";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+        }
+        &:before{
+            border-left: 1px solid #A1A6AD; 
+            border-top: 1px solid #A1A6AD; 
+            top: 0;
+            left: 0;
+        }
+        &:after{
+            border-left: 1px solid #A1A6AD; 
+            border-bottom: 1px solid #A1A6AD; 
+            bottom: 0;
+            left: 0;
+        }
+        >div:before{
+            border-right: 1px solid #A1A6AD; 
+            border-top: 1px solid #A1A6AD; 
+            top: 0;
+            right: 0;
+        }
+        >div:after{
+            border-right: 1px solid #A1A6AD; 
+            border-bottom: 1px solid #A1A6AD; 
+            bottom: 0;
+            right: 0;
+        } 
+    }
+    .scroll-table{
+        height:280px;
+        .scroll-box{
+            overflow-y: auto; 
+            height: 260px;
+        }                                       
+        table {
+            width:calc(~"100% - 1px");
+            thead th{
+                font-size: 10px;
+                line-height: 20px;
+                height:20px;
+                font-weight: normal;
+                background: #444851;
+                color: #A1A6AD;
+                text-align: center;
+                padding:0;
+            }
+            tbody{   
+                tr{
+                    background: transparent;
+                }                 
+                tr td{
+                    font-size: 10px;
+                    color: #FFFFFF;
+                    line-height: 24px;
+                    height:24px;
+                    text-align: center;
+                    padding-left:0;
+                    padding: 0;
+                }
+                tr.problem-log{
+                    td{
+                        color:#F5A623;
+                    }
+                    &:hover td{
+                        color:white;
+                        background: #F28321;
+                    }
+                    &.last td{
+                        border-bottom:1px solid #F28321;
+                    }                      
+                }                 
+                tr:hover td{
+                    color:white;
+                    background: #F28321;
+                    cursor: pointer;
+                } 
+            }
+        }
+    }
+
+    .interaction-area{
+        position:absolute;   
+        top:@top-header-height;     
+        left:@left-container-width;
+        right:@right-container-width;
+        width:calc(~"100% - @{left-container-width} - @{right-container-width}");
+        height: calc(~"100% - @{top-header-height}");
+        .corner-box.hover-area{
+            &:before, &:after, >div:before, >div:after{
+                width: 10px;
+                height: 10px;
+                border-width:2px;                
+            }
+        }
+        .tooltip-box{
+            width:230px;
+            max-height:300px;
+            position:absolute;
+            z-index:1000;
+            background: #2E323C;
+            opacity:0;
+            transition: opacity 1s ease;
+            box-shadow: -3px 2px 15px #000000;
+            .host-info{
+                height: 129px;
+                width:230px;
+                padding:6px;
+                .corner-box{
+                    height: 117px;    
+                    img{
+                        margin:3px 8px 0 3px;
+                    }  
+                    .host-detail{
+                        float: right;
+                        width:153px;
+                        p{
+                            margin:0;
+                        }
+                        .host-name{
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 20px;
+                            margin-bottom: 4px;
+                            height:40px;
+                            word-wrap: break-word;
+                            word-break: break-all;
+                        }
+                        .host-ip{
+                            height:16px;
+                            background: url("../img/pattern.png") repeat-x;
+                            border-bottom: 1px solid #F28321;
+                            margin-bottom: 2px;
+                            p{
+                                float:left;
+                                height: 15px;
+                                padding-left:8px;
+                                padding-right: 8px;
+                                height: 16px;
+                                font-size: 10px;
+                                text-align: center;
+                                line-height: 16px;
+                                color: #FFFFFF;
+                                background: #444851;
+                                margin:0;
+                            }
+                        }
+                        .label-btn{
+                            margin-top:10px;
+                            height:14px;
+                            label{
+                                font-size: 10px;
+                                color: #FFFFFF;
+                                margin:0;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }  
+            }
+            .host-info-extra{
+                margin:6px;
+                // margin:6px;
+                // margin-bottom: 6px;
+                width: 218px;
+                border-bottom:1px solid #F28321;
+                .title{
+                    height:16px;
+                    background: url("../img/pattern.png") repeat-x;
+                    border-bottom:1px solid #F28321;
+                    p{
+                        float:left;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        height: 15px;
+                        font-size: 10px;
+                        text-align: center;
+                        line-height: 16px;
+                        color: #FFFFFF;
+                        background: #444851;
+                        margin:0;
+                    }
+                }
+                .content{
+                    width: 220px;
+                    height: 85px;
+                    >dl{
+                        padding-top: 2px;
+                        margin-bottom: 0;
+                        border-bottom: 1px solid #444851;
+                        >dt, >dd{
+                            display: inline-block;
+                            font-size: 10px;
+                            height: 16px;
+                            vertical-align: text-top;
+                        }
+                        >dt{
+                            width: 100px;
+                            color: #A1A6AD;
+                        }
+                        >dd{
+                            width: 119px;
+                            color: #F28321;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    >dl:nth-child(3){
+                        >dd{
+                            height:32px;
+                            word-wrap: break-word;
+                            word-break: break-all;
+                            white-space: pre-wrap;
+                        }
+                    }
+                }                
+                .btn-mark{
+                    background: #2E323C;
+                    border: 1px solid #A1A6AD;
+                    border-radius: 2px;
+                    width: 68px;
+                    height: 20px;
+                    font-size: 10px;
+                    color: #FFFFFF;
+                    line-height: 8px;
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+}

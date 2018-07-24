@@ -1,0 +1,7 @@
+{
+  "DEBUG":100,
+  "INFO":10,
+  "WARNING":20,
+  "ERROR":10,
+  "CRITICAL":5
+}

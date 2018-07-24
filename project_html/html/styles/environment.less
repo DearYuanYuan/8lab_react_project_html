@@ -1,0 +1,629 @@
+@import "base.less";
+@navBgColor: #2e323c; //Tab 切换的背景色        
+.environment {
+    color: #fff;
+    header {
+        height: 86px;
+        background-color: #2e323c;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        padding-left: 240px;
+        z-index: 9;
+        .environment-title {
+            font-size: 20px;
+            color: #FFFFFF;
+            padding: 38px 0 0 24px;
+        }
+    }
+}
+
+//tab组件的默认样式更改-------------------------------
+#tabs {
+    position: relative;
+    .nav-tabs {
+        background-color: @navBgColor;
+        border: 0;
+        position: fixed;
+        right: 0;
+        top: 154px;
+        width: 100%;
+        padding-left: 240px;
+        z-index: 9;
+        li {
+            a {
+                padding: 15px 28px 15px 28px;
+                color: #A3A3A3;
+                border: 0;
+            }
+            a:hover {
+                background-color: #2e323c;
+                color: #fff;
+            }
+        }
+        li.active {
+            a,
+            a:focus,
+            a:hover {
+                border-width: 50%;
+                border-bottom: 4px solid #03A9F4;
+                background-color: #2e323c;
+                color: #fff;
+            }
+        }
+    }
+    >.tab-content {
+        margin-top: 139px;
+        padding: 24px;
+        background-color: #202129;
+    }
+}
+
+//echarts绘制的图表各个分辨率的显示
+// #charts,
+// #chartsOnline,
+// #chartsToday {
+//         position: absolute; // position: absolute;
+//         top: 30px; // top: 30px;
+//         left: 0; // left: 0;
+//         border-radius: 8px;
+//         // width: 100%;
+//         overflow: hidden;
+//         height: 300px
+// }
+
+
+// @media screen and(max-width:2560px) and (min-width:1680px) {
+//     #charts {
+//         width: 630px;
+//         height: 300px
+//     }
+//     #chartsOnline {
+//         width: 830px;
+//         height: 300px;
+//     }
+//     #chartsToday {
+//         width: 670px;
+//         height: 468px
+//     }
+// }
+
+// @media screen and(max-width:1700px) and (min-width:1280px) {
+//     #charts {
+//         width: 630px;
+//         height: 300px
+//     }
+//     #chartsOnline {
+//         width: 820px;
+//         height: 300px
+//     }
+//     #chartsToday {
+//         width: 640px;
+//         height: 488px
+//     }
+// }
+
+// @media screen and (max-width:1280px) {
+//     #charts {
+//         width: 380px;
+//         height: 280px
+//     }
+//     #chartsOnline {
+//         width: 580px;
+//         height: 280px
+//     }
+//     #chartsToday {
+//         width: 448px;
+//         height: 488px
+//     }
+// }
+
+//tab切换栏右侧部分----------------------------------------
+.sticker {
+    position: fixed;
+    top: 144px;
+    right: 3px;
+    // width: 600px;
+    height: 80px;
+    z-index: 19;
+
+}
+.logs-select {
+    margin-top: 10px;
+    margin-right: 24px;
+    float: right;
+    position: relative;
+    .form-control {
+        width: 120px;
+        height: 38px;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+}
+.search-img {
+    width: 23px;
+    height: 23px;
+    background: url("../img/icons.png") no-repeat -626px -5px;
+    display: block;
+    margin-top: 15px;
+    margin-right: 10px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+.mlSearch,
+.listSaerch,
+.graphicSaerch {
+    float: right;
+    cursor: pointer;
+    margin: 10px 24px 10px 0;
+}
+//图表显示
+@critical-color: #ff6733;
+@error-color: #fd936e;
+@warning-color: #e8bd65;
+@info-color: #e4e273;
+@debug-color: #56d6b0;
+.graphicDisplay {
+    height: 100%;
+}
+
+.Tab1-up {
+    width: 100%;
+    height: 355px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    .first-left {
+        .chartSytle();
+        width: 40%;
+        float: left;
+        .first-left-tip {
+            .chartTip() // font-size: 12px;
+            // line-height: 50px;
+            // color: #a1a6ad;
+            // border-bottom: 1px solid #444851;
+            // margin: 0 24px;
+            // padding: 0;
+        }
+    }
+    .first-right {
+        .chartSytle();
+        width: 58%;
+        float: left;
+        margin-left: 2%;
+        .first-right-tip {
+            .chartTip() // font-size: 12px;
+            // line-height: 50px;
+            // color: #a1a6ad;
+            // border-bottom: 1px solid #444851;
+            // margin: 0 24px;
+            // padding: 0;
+        }
+    }
+}
+
+.Tab1-center {
+    width: 100%;
+    height: 550px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.Tab1-center {
+    .second-left {
+        .chartSytle();
+        width: 55%;
+        float: left;
+        .live-title {
+            .chartTip() // font-size: 12px;
+            // line-height: 50px;
+            // color: #a1a6ad;
+            // border-bottom: 1px solid #444851;
+            // margin: 0 24px;
+            // padding: 0;
+        }
+        .logs-container {
+            padding: 24px;
+            overflow: hidden;
+            .logs-head {
+                margin-bottom: 33px;
+                display: flex;
+                .head-left {
+                    width: 80%;
+                }
+                .head-right {
+                    width: 20%;
+                }
+            }
+            .logs-center {
+                height: 79px;
+                line-height: 60px;
+                overflow: hidden;
+                .content {
+                    display: flex;
+                    .logs-text {
+                        position: relative;
+                        padding-left: 25px;
+                        width: 80%;
+                        overflow: hidden;
+                        .logs-img {
+                            position: absolute;
+                            top: 19px;
+                            left: -1px;
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                    .logs-time {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Tab1-center {
+    .second-right {
+        .chartSytle();
+        width: 43%;
+        float: left;
+        margin-left: 2%;
+        .second-right-title {
+            font-size: 12px;
+            line-height: 50px;
+            color: #a1a6ad;
+            border-bottom: 1px solid #444851;
+            margin: 0 24px;
+            padding: 0;
+        }
+    }
+}
+
+//列表显示的主体内容部分
+.list-content {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border: 1px solid #444851;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+//列表显示的单行数据显示控制
+.logs-details {
+    text-align: center;
+    display: flex;
+    height: 60px;
+    line-height: 60px; // color: @black;
+    padding-left: 20px;
+    overflow: hidden;
+    &:nth-child(odd) {
+        background-color: #252830;
+    }
+    &:nth-child(even) {
+        background-color: #2E323C;
+    }
+}
+
+.details-text {
+    padding-left: 36px;
+    width: 80%;
+    position: relative;
+    .details-time {
+        width: 20%;
+    }
+    div:nth-child(1) {
+        width: 26px;
+        height: 25px;
+        line-height: 22px;
+        position: absolute;
+        top: 19px;
+        left: 5px;
+    }
+    div:nth-child(2) {
+        margin-left: 20px;
+    }
+}
+
+.details-time {
+    width: 20%;
+}
+
+//------------------------------------------------------------------Ml-start
+.mlTable {
+    border: 1px solid #444851;
+    border-radius: 4px;
+}
+
+.ml {
+    .newTime {
+        position: absolute;
+        left: 0;
+        margin-top: 1.8%;
+        display: none;
+    }
+    .table {
+        border: 1px solid #444851;
+        border-radius: 4px;
+    }
+    .thead {
+        padding-left: 20px;
+        line-height: 60px;
+        height: 60px;
+        background: #2E323C;
+        >div {
+            float: left;
+            text-align: center;
+        }
+    }
+    .tr {
+        padding-left: 20px;
+        line-height: 60px;
+        height: 60px;
+        &:nth-child(odd) {
+            background: #252830;
+        }
+        &:nth-child(even) {
+            background: #2E323C;
+        }
+    }
+    .thead {
+        .ml-type,
+        .ml-filename-hint {
+            color: #fff
+        }
+    }
+    .tbody .tr>div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        float: left;
+        text-align: center;
+    }
+    .ml-index {
+        width: 5%;
+    }
+    .ml-pcr {
+        width: 6.3%;
+    }
+    .ml-template-hash {
+        width: 29%;
+    }
+    .ml-type {
+        width: 6.2%;
+        color: #03A9F4;
+    }
+    .ml-filedata-num {
+        width: 24%;
+    }
+    .ml-filename-hint {
+        color: #03A9F4;
+        width: 29%;
+    }
+}
+
+//------------------------------------------------------------------Ml-end
+.debug {
+    background: url("../img/icons.png") no-repeat -264px -177px;
+}
+
+.info {
+    background: url("../img/icons.png") no-repeat -264px -142px;
+}
+
+.warning {
+    background: url("../img/icons.png") no-repeat -264px -111px;
+}
+
+.error {
+    background: url("../img/icons.png") no-repeat -264px -77px;
+}
+
+.critical {
+    background: url("../img/icons.png") no-repeat -264px -44px;
+}
+
+
+//编辑增加主机弹框
+
+.editHostBox{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+    z-index: 309;
+}
+.editHost{
+    width:1150px;
+    height:90vh;
+    position: absolute;
+    z-index: 310;
+    left: 50%;
+    top:50vh;
+    margin-left: -575px;
+    margin-top: -45vh;
+    background:rgba(37,40,48,1);
+    box-shadow:0px 0px 4px 0px rgba(0,0,0,0.57);
+    border-radius:4px;
+    overflow-y: auto;
+    padding:24px;
+    h1{
+        height:20px;
+        font-size:14px;
+        color:rgba(161,166,173,1);
+        line-height:20px;
+        margin: 0 0 16px 0;
+        position: relative;
+        & > i {
+            float:right;
+            cursor: pointer;
+            font-size:14px;
+        } 
+    }
+   
+    .lines{
+        height:1px ;
+        width:100%;
+        background: #444851;
+        margin:0;
+    }
+    h3{
+        height:17px;
+        font-size:12px;
+        color:rgba(255,255,255,1);
+        line-height:17px;
+        margin:24px 0 8px 0 ;
+    }
+    input{
+        width:270px;
+        height:38px;
+        border-radius:4px;
+        border:1px solid rgba(68,72,81,1);
+        background: #252830;
+        padding-left: 16px;
+        line-height: 38px;
+        font-size:12px;
+        color:rgba(161,166,173,1);
+
+    }
+}
+.selectHost{
+    margin-top: 48px;
+}
+.left-host-out ,.right-host-in{
+    float: left;
+    display: inline-block;
+    width: 517px;
+    h4{
+        height:18px;
+        font-size:12px;
+        color:rgba(255,255,255,1);
+        line-height:18px;
+        margin:24px 0;
+    }
+    input{
+        width:471px;
+    }
+}
+.center-button{
+    float: left;
+    display: inline-block;
+    width: 60px;
+    height: 160px;
+    margin-top: 340px;
+    button{
+        width:38px;
+        height:38px;
+        border-radius:4px;
+        margin-left: 10px;
+    }
+    .host-getIn{
+        background:rgba(19,62,98,1);
+        border:1px solid rgba(0,122,225,1);
+        margin:0 0 64px 11px;
+    }
+    .host-getOut{
+        background:rgba(94,23,23,1);
+        border:1px solid rgba(191,36,36,1)
+    }
+}
+.host-search-btn{
+    width:38px;
+    height:38px;
+    background:rgba(19,62,98,1);
+    border-radius:4px;
+    border:1px solid rgba(0,122,225,1);
+    margin-left: 8px;
+}
+
+.hostList-tab{
+    margin-top: 16px;
+    border:1px solid #444851;
+    border-radius:4px;
+    height:580px;
+    padding-bottom: 24px;
+    table{
+        td:nth-child(1){
+            width:30%;
+        }
+        td:nth-child(2){
+            width:30%
+        }
+        td:nth-child(3){
+            width:40%
+        }
+    }
+
+    .list-head{
+        table{
+            tr{
+                background: #202129;
+                border-bottom: 1px solid #444851;
+            }
+            td{
+                color: #A1A6AD;
+                font-size: 12px;
+                padding:8px 0 8px 16px;
+            }
+        }
+
+    }
+    .list-body{
+        overflow-y: auto;
+        height:520px;
+        table{
+            tr{
+                border-bottom: 1px solid #444851;
+            }
+            tr:nth-child(even){
+                background: #252830;
+            }
+            tr:nth-child(odd){
+                background: #282C35;
+            }
+            td{
+                color: #fff;
+                font-size: 12px;
+                padding:8px 0 8px 16px;
+            }
+        }
+
+    }
+}
+.edit-confirm-btn{
+    text-align: right;
+    margin: 36px 0 12px 0;
+    button{
+        width:120px;
+        height:28px;
+        background:rgba(46,50,60,1);
+        border-radius:4px;
+        border:1px solid rgba(68,72,81,1);
+        font-size: 12px;
+        line-height: 28px;
+        margin-left: 24px;
+    }
+    .edit-confirm{
+        background:rgba(19,62,98,1);
+        border:1px solid rgba(0,122,225,1);
+    }
+}
+.host-checkbox{
+    display: inline-block;
+    width:18px;
+    height:18px;
+    border-radius:4px;
+    border:1px solid rgba(218,225,233,1);
+    vertical-align: bottom;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.selected-host{
+    background: #007AE1;
+    border:1px solid #007AE1;
+}

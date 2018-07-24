@@ -1,0 +1,5 @@
+//waf rpc 服务 处理waf所有远程调用
+service WafRPCService {
+    i32 switch_waf(1:string operation), //控制waf中开关
+    string test(1:string msg)
+}

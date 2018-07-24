@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/identification</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="birdview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3d-界面-copy" transform="translate(-1239.000000, -782.000000)" fill="#F5A623">
+            <g id="Group-5" transform="translate(1239.000000, 755.000000)">
+                <path d="M40,107 C17.90861,107 0,89.09139 0,67 C0,44.90861 17.90861,27 40,27 C62.09139,27 80,44.90861 80,67 C80,89.09139 62.09139,107 40,107 Z M58,73 L58,68 C58,64.6862915 55.3137085,62 52,62 L28,62 C24.6862915,62 22,64.6862915 22,68 L22,73 L58,73 Z M58,78 L22,78 L22,84 C22,87.3137085 24.6862915,90 28,90 L52,90 C55.3137085,90 58,87.3137085 58,84 L58,78 Z M31,50 L35,50 C35,47.2385763 37.2385763,45 40,45 C42.7614237,45 45,47.2385763 45,50 L49,50 C49,45.0294373 44.9705627,41 40,41 C35.0294373,41 31,45.0294373 31,50 Z M31,50 L31,62 L35,62 L35,50 L31,50 Z M45,50 L45,62 L49,62 L49,50 L45,50 Z" id="icons/identification"></path>
+            </g>
+        </g>
+    </g>
+</svg>

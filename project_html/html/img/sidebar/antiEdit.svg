@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/sidebar/antiEdit</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/sidebar/antiEdit" fill="#A1A6AD">
+            <g id="Group" transform="translate(9.778175, 10.778175) rotate(-315.000000) translate(-9.778175, -10.778175) translate(7.778175, 1.778175)">
+                <rect id="Rectangle-6" x="0" y="3" width="3.94314575" height="10"></rect>
+                <rect id="Rectangle-6-Copy" x="0" y="0" width="3.94314575" height="2"></rect>
+                <polygon id="Triangle-2" points="1.97157288 18 0 14 3.94314575 14"></polygon>
+            </g>
+            <rect id="Rectangle-8" transform="translate(5.474874, 5.474874) rotate(-315.000000) translate(-5.474874, -5.474874) " x="2.47487373" y="4.97487373" width="6" height="1"></rect>
+            <rect id="Rectangle-8-Copy" transform="translate(15.474874, 15.474874) rotate(-315.000000) translate(-15.474874, -15.474874) " x="12.4748737" y="14.9748737" width="6" height="1"></rect>
+        </g>
+    </g>
+</svg>

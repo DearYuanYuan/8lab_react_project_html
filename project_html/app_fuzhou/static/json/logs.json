@@ -1,0 +1,60 @@
+{
+    "pageCount":20,
+    "logs": [
+        [
+            "2016-07-20 13:16:17",
+            "DEBUG",
+            "[7f8709ffb700] (logger) Response code '200 OK' for GET /api/notifications?_=1468987325983 from 127.0.0.1:35769"
+        ],
+        [
+            "2016-07-20 13:16:17",
+            "DEBUG",
+            "[7f870a7fc700] (logger) Response code '200 OK' for GET /api/logs?node=&source=api&level=DEBUG&max_entries=5000&_=1468987325984 from 127.0.0.1:35770"
+        ],
+        [
+            "2016-07-20 13:16:17",
+            "DEBUG",
+            "[7f8710da4700] (logger) Response code '200 OK' for GET /api/nodes/allocation/stats?_=1468987325982 from 127.0.0.1:35717"
+        ],
+        [
+            "2016-07-20 13:16:17",
+            "DEBUG",
+            "[7f870a7fc700] (logger) Request GET /api/logs?node=&source=api&level=DEBUG&max_entries=5000&_=1468987325984 from 127.0.0.1:35770 "
+        ],
+        [
+            "2016-07-20 13:16:17",
+            "DEBUG",
+            "[7f8709ffb700] (logger) Request GET /api/notifications?_=1468987325983 from 127.0.0.1:35769 "
+        ],
+        [
+            "2016-07-20 13:16:17",
+            "DEBUG",
+            "[7f8710da4700] (logger) Request GET /api/nodes/allocation/stats?_=1468987325982 from 127.0.0.1:35717 "
+        ],
+        [
+            "2016-07-20 13:16:12",
+            "DEBUG",
+            "[7f8710da4700] (logger) Response code '200 OK' for GET /api/logs?node=&source=api&level=DEBUG&max_entries=5000&_=1468987325981 from 127.0.0.1:35717"
+        ],
+        [
+            "2016-07-20 13:16:12",
+            "DEBUG",
+            "[7f8710da4700] (logger) Request GET /api/logs?node=&source=api&level=DEBUG&max_entries=5000&_=1468987325981 from 127.0.0.1:35717 "
+        ],
+        [
+            "2016-07-20 13:16:07",
+            "DEBUG",
+            "[7f8710da4700] (logger) Response code '200 OK' for GET /api/logs?node=&source=api&level=DEBUG&max_entries=5000&_=1468987325980 from 127.0.0.1:35717"
+        ],
+        [
+            "2016-07-20 13:16:07",
+            "DEBUG",
+            "[7f8710da4700] (logger) Request GET /api/logs?node=&source=api&level=DEBUG&max_entries=5000&_=1468987325980 from 127.0.0.1:35717 "
+        ],
+        [
+            "2016-07-20 13:16:02",
+            "DEBUG",
+            "[7f8710da4700] (logger) Response code '200 OK' for GET /api/logs?node=&source=api&level=DEBUG&max_entries=5000&_=1468987325979 from 127.0.0.1:35717"
+        ]
+    ]
+}

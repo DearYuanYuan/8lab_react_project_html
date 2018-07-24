@@ -1,0 +1,75 @@
+.svn-box {
+    .back-version-content{
+        // height: 565px;
+        .svn-fa-history,
+        .svn-box-icon {
+            margin-right: 4px;
+            font-size: 18px;
+        }
+        .svn-version-id,
+        .svn-box-title {
+            font-size: 14px;
+        }
+        i.svn-close-icon {
+            font-size: 25px !important;
+        }
+    
+        .box-content {
+            height: 300px;
+            overflow-y: auto;
+            p {
+                margin: 0px;
+                height: 50px;
+                font-size: 12px;
+                color: #FFFFFF;
+                line-height: 50px;
+                padding-left: 24px;
+            }
+            p:nth-child(2n+1) {
+                background: #2E323C;
+            }
+        }
+    }
+}
+.tamper .tamper-content .version-msg-list table.svn-db-host-list {
+    word-break: break-all;  //表格自动换行
+    table-layout: fixed;    //固定布局的算法，表格和列的宽度取决于col对象的宽度总和，假如没有指定，则会取决于第一行每个单元格的宽度。
+                            //假如表格没有指定宽度(width)属性，则表格被呈递的默认宽度为100% （注意：此样式是关键）
+    tr td:nth-child(1) {
+        padding: 10px 20px 10px 40px;
+    }
+    tr th:nth-child(1) {
+        padding: 10px 20px 10px 25px;
+    }
+    tr td,
+    tr th {
+        padding: 10px 20px 10px 20px;
+    }
+    tr td:last-child {
+        white-space: nowrap;      //设置内容抵达容器边界会不会转到下一行
+        overflow: hidden;         //不显示超过对象尺寸的内容（这个绝对不能少）,也就是说设置td里面的数据无论有多少，都不会换行
+        text-overflow: ellipsis;  //将被隐藏的那部分用省略号代替。
+    }
+}
+.svnVersionDetail {
+    border-radius: 4px;
+    margin: 0 24px 24px 0;
+    height: 28px;
+    border: 1px solid #FFFFFF;
+    background: none;
+}
+.svnVersionDetail:hover {
+    border: 1px solid #FFFFFF;
+    background: none;
+}
+.svnBackToVersion {
+    height: 28px;
+}
+
+.svn-fa-history {
+    margin-right: 4px;
+    font-size: 18px;
+}
+.svn-version-id {
+    font-size: 14px;
+}

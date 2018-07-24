@@ -1,0 +1,405 @@
+@sample-blue:#007AE1;
+@gray-font:#A3A3A3;
+@white-font:#fff;
+@blue-font:#32A1FF;
+.tamper{
+  .tamper-head{
+    padding-bottom: 0;
+  }
+  .tab-tamper{
+    margin:30px 0 0 0;
+    border-bottom: 2px solid transparent;
+    li{
+      display: inline-block;
+      float: left;
+      line-height: 40px;
+      margin-bottom: -2px;
+      width:140px;
+      text-align: center;
+      cursor: pointer;
+      color: @gray-font;
+      font-size: 14px;
+    }
+    li.tab-active{
+      border-bottom: 2px solid @sample-blue;
+      color: @white-font;
+    }
+  }
+  .tamper-content{
+    .databaseList{
+      text-align: left;
+      color: #A1A6AD;
+    }
+    .version-msg-list{
+      table.databaseHostList tr td{
+        font-size: 12px;
+        padding: 10px 0 10px 40px;
+      }
+      table.databaseHostList tr td:nth-child(4){
+        color: @blue-font;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.left-file-list{
+  h4{
+    font-size: 12px;
+    margin-left:24px;
+    cursor: pointer;
+    i{
+      margin-right: 8px;
+    }
+  }
+}
+.detail-toggle{
+  margin-left: 46px;
+  font-size: 12px;
+  p{
+    background: #444851;
+    border-radius: 4px;
+    margin-right: 24px;
+    padding:0 8px;
+    color: #A1A6AD;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    b{
+      margin-right: 8px;
+      color: #fff;
+    }
+  }
+  p.select-root{
+    background: @sample-blue;
+    color: #fff;
+    b{
+      color: #fff;
+    }
+  }
+}
+.version-msg-list h3{
+  font-size: 12px;
+  color: #A1A6AD;
+  margin:24px 0;
+}
+.versionFileChangeList{
+  p{
+    background:#202129;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: 10px;
+    padding: 0 8px;
+    color: #A1A6AD;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+//版本信息维护
+.versionMsg{
+  padding-left:40px;
+  display: none;
+  .versionMsgTitle{
+    margin:0;
+    font-size: 12px;
+    line-height: 60px;
+  }
+  .backToVersion{
+    border-radius: 4px;
+    margin:0 24px 24px 0;
+  }
+}
+.tamperLoadingBox{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width:660px;
+  height:400px;
+  margin:-200px 0 0 -330px;
+  background: rgba(34,40,48,.2);
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.57);
+  border-radius: 4px;
+  z-index: 999;
+  line-height: 400px;
+  text-align: center;
+  i{
+    color: #007AE1;
+  }
+  .ajax-progress-box{
+    width:50%;
+    height:16px;
+    background: #444851;
+    border-radius: 4px;
+    margin:-24% auto 0;
+    position: relative;
+    .ajax-progress{
+      position: absolute;
+      top:0;
+      left:0;
+      height:16px;
+      background: url("../img/striped.png") repeat-x;
+      border-radius: 4px;
+    }
+  }
+}
+
+.BackVersionBox{
+  position: fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background: rgba(0,0,0,0.50);
+  z-index: 999;
+  .back-version-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width:660px;
+    height:400px;
+    margin:-200px 0 0 -330px;
+    background: #252830;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.57);
+    border-radius: 4px;
+    //z-index: 999;
+    .pathName{
+      font-size: 12px;
+      margin:20px 24px;
+    }
+    .back-v-title,.back-v-list{
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+      //width: 240px;
+      color: @gray-font;
+      margin: 8px 24px 12px 24px;
+      border-bottom: 1px solid #444851;
+      b{
+        font-weight: normal;
+        color: @blue-font;
+      }
+      i.close-icon{
+        display: inline-block;
+        float: right;
+        font-size: 20px;
+        color: #007AE1;
+        width:20px;
+        cursor: pointer;
+      }
+    }
+    .back-v-list{
+      border:0;
+      margin:0 24px 0 24px;
+      line-height: 30px;
+      height:30px;
+      b{
+        color: @white-font;
+        font-weight: normal;
+      }
+    }
+    .usrMsgFill{
+      font-size: 12px;
+      ul{
+        margin:12px 24px 0 24px;
+        border-top: 1px solid #444851;
+        padding-top:8px;
+      }
+      li{
+        display: inline-block;
+        line-height: 40px;
+        margin-right: 24px;
+      }
+      input{
+        width: 270px;
+        border: 1px solid #ffffff;
+        background: #252830;
+        border-radius: 4px;
+        line-height: 30px;
+        padding-left: 12px;
+        font-size: 12px;
+        height: 30px;
+        color: @gray-font;
+      }
+    }
+    .version-action{
+      text-align: right;
+      margin-top:12px;
+      .back-v-btn{
+        height:28px;
+        line-height: 28px;
+        width:120px;
+        font-size: 12px;
+        border-radius: 4px;
+      }
+      .back-v-btn-back{
+        background: #252830;
+        border:1px solid @white-font
+      }
+    }
+  }
+}
+.left-file-list{
+  float: left;
+  width:24%;
+  padding: 0 24px 24px 24px;
+}
+.right-file-list{
+  float: left;
+  width:76%;
+  padding:0 24px 24px 0;
+}
+.border-cover{
+  border: 1px solid #444851;
+  border-radius: 4px;
+  background: #202129;
+}
+.zTreeDemoBackground{
+  height:225px;
+  overflow-y:auto ;
+  margin:0 16px;
+  border-radius: 4px;
+  background: #2E323C;
+}
+//文件管理
+.file-manage-title{
+  font-size: 12px;
+  margin:0 24px;
+  line-height: 50px;
+  border-bottom: 1px solid #444851;
+}
+.version-msg-list table.fileMange-tab{
+  tbody tr td:nth-child(3){
+    color: @white-font;
+  }
+  tbody tr td:nth-child(2){
+    color: @blue-font;
+  }
+}
+i.file-icon{
+  margin-right: 16px;
+}
+.file-manage-title a{
+  font-size: 12px;
+  color: #A1A6AD;
+  cursor: pointer;
+  background: #444851;
+  border-radius: 4px;
+  color: #f0f0f0;
+  padding: 6px 6px;
+  margin: 4px;
+}
+.file-manage-title a:nth-last-child(1){
+  background: @sample-blue;
+}
+.file-manage-title a:hover{
+  text-decoration: none;
+}
+.showHistoryVersion{
+  border-radius: 4px;
+  height: 24px;
+  margin:0 24px 0 0;
+}
+.versionTabContainer{
+  height:426px;
+  overflow-y:auto ;
+}
+.fileChangeOption{
+  margin:20px 0 10px 24px;
+  text-align: right;
+}
+table.databaseHostList tr td.selectFileBtn, table.databaseHostList th.selectFileBtn{
+  width:2%;
+  a{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    vertical-align: bottom;
+    cursor: pointer;
+    overflow: hidden;
+    color: transparent;
+  }
+  a.onSelect{
+    background: @sample-blue;
+    border:1px solid @sample-blue;
+  }
+}
+.newFileName{
+  width: 270px;
+  border-bottom: 1px solid #ffffff;
+  background: #252830;
+  //border-radius: 5px;
+  line-height: 24px;
+  padding-left: 12px;
+  font-size: 12px;
+  height: 24px;
+  color: #a3a3a3;
+}
+input[type="file"].showHistoryVersion{
+  display: inline;
+}
+.tamperLogin{
+  padding-bottom:100px;
+}
+.tamperLoginBox{
+  width:270px;
+  margin:100px auto 10px;
+  .tamper-register-go{
+    text-align: center;
+  }
+  a.tamper-register{
+    color:#007AE1;
+    font-size: 12px;
+
+  }
+  a.tamper-register:hover{
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+.tamperLoginBox p{
+  font-size: 12px;
+  color: #FFFFFF;
+  margin:12px 0;
+}
+.tamperLoginBox input{
+  width: 270px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  line-height: 38px;
+  font-size: 12px;
+  height: 38px;
+  background: #252830;
+  color: #A1A6AD;
+  padding-left: 24px;
+}
+.tamperLoginBox button{
+  width: 270px;
+  background: #007ae1;
+  color: #ffffff;
+  border: 1px solid #007ae1;
+  font-size: 12px;
+  border-radius: 4px;
+  height: 32px;
+  line-height: 32px;
+  margin-top: 12px;
+}
+.tamperUsrName{
+  font-size: 12px;
+  margin-left: 24px;
+  font-weight: normal;
+  a{
+    margin-left: 8px;
+  }
+  a:hover{
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+//移动文件树形结构
+.ztree li span.button.noline_close{
+  background: url("../img/tree-close.png") no-repeat center;
+}

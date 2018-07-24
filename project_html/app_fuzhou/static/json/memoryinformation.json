@@ -1,0 +1,7 @@
+{
+  "cached": [1, 4, 5, 2, 5],
+  "city": ["\u9999\u6e2f", "\u5df4\u9ece", "\u4e1c\u4eac", "\u5317\u4eac", "\u4f26\u6566"],
+  "page_bufferpool": [1, 0, 0, 0, 1],
+  "nonpage_bufferpool": [0, 0, 1, 0, 1],
+  "committed": [6, 14, 14, 1, 12]
+}

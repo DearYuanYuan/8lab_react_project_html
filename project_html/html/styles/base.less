@@ -1,0 +1,385 @@
+@white: #fff;
+@blue: #007AE1; //作为关键色使用
+@hover: #29B6F6; //可用于控件的悬停状态
+@focus: #0288D1; //可用于控件的按下状态
+@selected: #E1F5FE; //选中背景色
+@text: #3F3F3F; //正文文本颜色
+@title: #A3A3A3; //标签页标题、翻页控件图标
+@border: #D9D9D9; //卡片/输入框/按钮等边框颜色 (Divider)、低层级文本颜色
+@table: #F7F7F7; //表格斑马纹底色
+@bg: #EEF1F5; //页面背景色
+
+html{
+    background: #202129;
+}
+body{
+    margin: 0;
+}
+#indexbg{
+    position: fixed;
+    top:0px;
+    z-index: -10;
+}
+.loading{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background:#000 url(../img/loading.gif) no-repeat center;
+}
+
+//react-bootstrap   ---------------------------start
+.form-control {
+    background-color: transparent;
+    color: #fff;
+    padding: 6px 10px;
+}
+
+
+.modal-dialog{
+     margin: 200px auto;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+ select::-ms-expand {
+        display: none;
+    }
+.select-style {
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 120px;
+    height: 38px;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #fff;
+    padding: 6px 10px;
+    >option {
+        background-color: #202129;
+    }
+    &:hover{
+        border-color: #66afe9;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+    outline-offset: 0px;
+    border: none;
+}
+
+// 大号按钮样式       通过设置bsSize='lg'||'sm'||'xs'  分别代表了按钮的大小中
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:visited {
+    color: @text;
+    box-sizing: border-box;
+}
+
+.btn-lg,
+.btn-lg:visited {
+    font-size: 14px;
+    width: 120px;
+    height: 48px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff; // border: 1px solid @border;
+}
+
+.btn-lg:hover {
+    background: #D9D9D9;
+    color: @text;
+}
+
+.btn-lg:focus {
+    background: #A3A3A3;
+    color: @text;
+}
+
+//中号按钮样式
+.btn-sm {
+    font-size: 12px;
+    width: 120px;
+    height: 38px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff; // border: 1px solid @border;
+}
+
+.btn-sm:hover {
+    background: @hover;
+    font-size: 12px;
+    color: @text;
+}
+
+.btn-sm:focus {
+    background: @focus;
+    font-size: 12px;
+    color: @text;
+}
+
+//小号按钮样式
+.btn-xs,
+.btn-xs:visited {
+    font-size: 12px;
+    width: 120px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff; // border: 1px solid @border;
+}
+
+.btn-xs:hover {
+    background: @hover;
+    font-size: 12px;
+    color: @text;
+}
+
+.btn-xs:focus {
+    background: @focus;
+    font-size: 12px;
+    color: @text;
+}
+
+//小号按钮样式
+.btn-icon,
+.btn-icon:visited {
+    width:38px;
+    height:38px;
+    background:#2E323C;
+    border-radius:4px;
+    border:1px solid  #444851;
+    font-size: 12px;
+    color: #fff; // border: 1px solid @border;
+}
+
+.btn-icon:hover {
+    background: @hover;
+    font-size: 12px;
+    color: @text;
+}
+
+.btn-icon:focus {
+    background: @focus;
+    font-size: 12px;
+    color: @text;
+}
+.btn-icon-blue{
+    background:#133E62;
+    border:1px solid #007AE1;
+}
+
+
+
+
+//不可用状态
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn,
+.btn.disabled:hover,
+.btn[disabled]:hover,
+fieldset[disabled]:hover .btn:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    background: #D9D9D9;
+    border-radius: 4px;
+    color: @text;
+}
+
+//默认
+.btn-default,
+.btn-default:visited {
+    border-color: #ccc
+}
+
+.btn-default:hover {
+    border: none;
+    background-color: @hover;
+}
+
+.btn-default:focus {
+    border: none;
+    background-color: @focus
+}
+
+//蓝色按钮
+.btn-primary,
+.btn-primary:visited {
+    background-color: @blue;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: @hover;
+}
+
+.btn-primary:focus {
+    background: @focus;
+}
+
+// input{
+//   width: 270px;
+//   height:38px;
+//   border: 1px solid #D9D9D9;
+//   border-radius: 4px;
+// }
+// input:focus{
+//   border: 1px solid #03A9F4;
+// }
+//animate 动画  start ----------------
+//The chart title annimate  首页图表标题动画
+@keyframes header-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+//animate 动画  end ----------------
+//清除浮动
+.clearfix() {
+    content: " ";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.chartSytle {
+    position: relative;
+    height: 100%;
+    background-color: @home-EchartsColor;
+    border-radius: @homeRadius;
+    border: 1px solid #444851;
+}
+
+//表格提示的样式
+.chartTip {
+        font-size: 12px;
+    line-height: 50px;
+    color: #a1a6ad;
+    border-bottom: 1px solid #444851;
+    margin: 0 24px;
+    padding: 0;
+}
+
+
+// 字体样式指定为@arial-default-font
+html,
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif; // font-family: PingFangSC-Regular;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+    background-color: #202129;
+    user-select: none;
+}
+
+a {
+    &:focus {
+        outline: none;
+        outline-offset: 0;
+    }
+}
+
+ul li {
+    list-style-type: none;
+}
+
+//去除Ｉｎｐｕｔ标签ｆｏｃｕｓ时候的边框；
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus input[type="text"]:focus {
+    outline: none;
+    outline-offset: 0px;
+}
+
+//-webkit自定义滚动条样式   start-------------------
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+//Track 外层轨道
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 12px;
+    border-radius: 10px;
+    background: #42495b;
+}
+
+//Handle （拖动条
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #353c48;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+//-webkit自定义滚动条样式   end  ----------------------
+
+
+
+/* icons     ----------------------------------------------------------- 字体图标start  */
+/*列：<i className="iconfont icon-iconfontjixieqimo"></i>
+      iconfont是公共样式：
+      单独的字体内容单独设置content
+*/
+
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot'); /* IE9*/
+  src: url('../fonts/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-defence_icon:before { content: "\e607";font-size: 18px; }
+
+.icon-dbconfig_icon:before { content: "\e608";font-size: 14px;}
+
+.icon-bigdata_icon:before { content: "\e609"; }
+
+.icon-db_icon:before { content: "\e60a"; font-size: 12px;}
+
+.icon-plugin_icon:before { content: "\e60b";  font-size: 18px;}
+
+.icon-homepage_icon:before { content: "\e60c"; }
+
+.icon-trust_icon:before { content: "\e60d"; }
+
+.icon-wlist_icon:before { content: "\e60e"; font-size: 14px;}
+
+.icon-waf_icon:before { content: "\e60f";  font-size: 14px;}
+
+.icon-blockchain_icon:before { content: "\e610";font-size: 18px }
+
+.icon-globalsense-icon:before { content: "\e611"; font-size: 18px}
+
+
+.icon-anti-distort:before { content: "\e612"; }
+
+.icon-infocenter_icon:before { content: "\e613"; }
+
+.icon-protect_control:before { content: "\e614"; }

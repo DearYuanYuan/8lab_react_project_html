@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 2 Copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="745" cy="317" r="25"></circle>
+    </defs>
+    <g id="birdview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3d-界面详情" transform="translate(-720.000000, -292.000000)">
+            <g id="Oval-2-Copy-4">
+                <use fill="#F6A623" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <circle stroke="#FFFFFF" stroke-width="7" cx="745" cy="317" r="21.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

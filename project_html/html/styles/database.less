@@ -1,0 +1,992 @@
+/*@import "http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css";
+@import "http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.min.css";*/
+
+@import "sui.css";
+@border-black: #444851;
+@bg-cover-deep-black: #252830;
+@bg-cover-black: #2E323C;
+@bg-cover: #202129;
+@btn-bg-deep: #007AE1;
+@color-blue: #32A1FF;
+@font-color-grey: #A1A6AD;
+@font-color-white: #fff;
+.databaseBtnAdd,
+.databaseBtnDel {
+    border-radius: 4px;
+    line-height: 8px;
+}
+.databaseCover{
+    padding: 68px 0 0 240px;
+    height:100%;
+    min-height: 800px;
+    background: @bg-cover;
+    color:@font-color-white;}
+.databaseBtnDel {
+    background: transparent;
+    border: 1px solid @font-color-white;
+}
+
+.chain-content {
+    margin: 160px 24px 24px 24px;
+    border: 1px solid @border-black;
+    background: @bg-cover-deep-black;
+    border-radius: 4px;
+    height: 268px;
+    ul {
+        width: 90%;
+        margin: 12px 0 12px 10%;
+    }
+    ul li {
+        display: inline-block;
+        width: 33.33%;
+        margin:20px 0;
+        img {
+            float: left;
+            margin: 20px 20px 0 0;
+        }
+        p {
+            font-size: 12px;
+        }
+        h2 {
+            font-size: 50px;
+            line-height: 40px;
+            color: @color-blue;
+        }
+    }
+}
+
+.database-content {
+    margin: 176px 24px 24px 24px;
+    border: 1px solid @border-black;
+    background: @bg-cover-deep-black;
+    border-radius: 4px;
+}
+
+.dataList-content:nth-child(odd) table.databaseHostList tr {
+    background: #252830;
+}
+
+.databaseListUl {
+    margin: 24px 24px 0 24px;
+    border-bottom: 1px solid @border-black;
+    position: relative;
+    z-index: 9;
+    .base-select {
+        border-bottom: 1px solid @color-blue;
+    }
+}
+
+.databaseList {
+    display: inline-block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    width: 240px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tabDatabaseDetail {
+    opacity: 0;
+    height: 0;
+    overflow: hidden
+}
+
+.database-content {
+    //cursor: pointer;
+}
+
+table.databaseHostList tr td {
+    //padding:12px 0 12px 40px;
+    font-size: 12px;
+}
+
+table.databaseHostList tr td,
+table.databaseHostList th {
+    width: 12.5%;
+}
+
+table.databaseHostList tbody tr td:nth-child(2n) {
+    color: #fff;
+}
+
+table.databaseHostList thead tr {
+    background: @bg-cover-deep-black;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+table.databaseHostList tbody tr {
+    border-bottom: 1px solid @border-black;
+}
+
+table.databaseHostList tbody tr:nth-child(2n+1) {
+    background: @bg-cover-black;
+}
+
+table.databaseHostList tbody tr:nth-child(2n) {
+    background: @bg-cover-deep-black;
+}
+
+.showDatabaseHostList {
+    background: #444851; // display: none;
+}
+
+table.baseHostList {
+    width: 80%;
+    margin: 0 auto;
+}
+
+table.baseHostList thead tr {
+    background: #444851;
+    font-size: 12px;
+    font-weight: normal;
+    border-bottom: 1px solid #A1A6AD;
+}
+
+table.baseHostList tbody tr:nth-child(n) {
+    background: #444851;
+}
+
+table.baseHostList tbody tr td:nth-child(n) {
+    color: #fff;
+}
+
+table.baseHostList tbody tr td button {
+    height: 28px;
+    width: 54px;
+    margin-right: 10px;
+}
+
+table.databaseHostList tr td:nth-child(1) {
+    background: url(../img/data-host-select.svg) 12px center no-repeat; //background-size: 5%;
+}
+
+.roundPercent {
+    margin: 10px 0;
+    width: 65px;
+    height: 65px;
+    overflow: hidden;
+}
+
+.percentMsg {
+    display: none;
+}
+
+.editDatabaseCover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.8)
+}
+
+.editDatabase {
+    position: relative;
+    width: 440px;
+    padding-bottom: 20px;
+    background: #202129;
+    left: 50%;
+    top: 50%;
+    margin-top: -150px;
+    margin-left: -40px;
+    h2 {
+        font-size: 16px;
+        border-bottom: 1px solid @border-black;
+        line-height: 50px;
+        padding-left: 24px;
+    }
+    button {
+        margin-right: 0;
+        border-radius: 4px;
+        height: 32px;
+        line-height: 32px;
+        margin-top: 0;
+    }
+    button.editBtnConform {
+        float: right;
+    }
+    button.editBtnCancle {
+        background: #2e323c;
+        border: 1px solid #fff;
+    }
+}
+
+.editDatabaseList {
+    width: 70%;
+    margin: 14px auto 0;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+h3.editDatabaseList {
+    text-align: center;
+    color: @btn-bg-deep;
+    font-size: 14px;
+}
+
+.editDatabaseList input {
+    float: right;
+    width: 220px;
+    border: 1px solid #ffffff;
+    background: #2e323c;
+    border-radius: 5px;
+    line-height: 30px;
+    padding-left: 24px;
+    font-size: 12px;
+    height: 30px;
+}
+
+#chain_box {
+    animation: changehovertree 100s linear infinite;
+}
+
+#chain_box:hover {
+    animation-play-state: paused
+}
+
+@-webkit-keyframes changehovertree {
+    0% {
+        -webkit-transform: rotate(0)
+    }
+    50% {
+        -webkit-transform: rotate(180deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes changehovertree {
+    0% {
+        transform: rotate(0)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+table.databaseHostList tr td.singleTab:nth-child(1) {
+    background: none;
+}
+
+div.editDatabaseList {
+    position: relative;
+}
+
+.showExitMsg {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 220px;
+    border: 1px solid #ffffff;
+    background: #2e323c;
+    border-radius: 5px;
+    line-height: 30px;
+    z-index: 9;
+}
+
+.showExitMsg p {
+    font-size: 12px;
+    height: 30px;
+    margin: 0;
+    padding-left: 24px;
+}
+
+.showExitMsg p:hover {
+    background: #007ae1;
+}
+
+.editDatabaseList input.addDatabaseIp,
+.editDatabaseList input.addDatabaseType {
+    cursor: pointer;
+    background: url(../img/data-drop-down.svg) 190px center no-repeat;
+}
+
+.searchPlugin input.searchDatabaseIpt {
+    margin-left: 20px;
+}
+
+.my-dropdown-list .item-selected {
+    background-image: none;
+}
+
+//区块链样式
+.blockChainHead {
+    padding-bottom: 0;
+}
+
+.currentDeal-content {
+    margin: 160px 24px 24px 24px;
+    border: 1px solid @border-black;
+    background: @bg-cover-deep-black;
+    border-radius: 4px;
+    .deal-search {
+        height: 66px;
+        margin: 10px 0;
+    }
+}
+
+.block-chain-sec-title {
+    font-size: 12px;
+    margin: 0 24px;
+    padding: 14px 0;
+    line-height: 40px;
+    border-bottom: 1px solid @border-black;
+    color: #a3a3a3;
+    b {
+        font-weight: normal;
+        cursor: pointer;
+    }
+    .the-select-usr {
+        color: #fff;
+        font-size: 14px;
+        margin-left: 12px;
+    }
+}
+
+button.addNewDeal {
+    background: #252830;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    margin: 24px;
+}
+
+img.usr-msg-imgIcon {
+    margin-right: 10px;
+    width: 30px;
+    border-radius: 15px;
+}
+
+table.chainDealTitle thead th {
+    background: #202129;
+}
+
+#chain_box {
+    float: left;
+    display: inline-block;
+}
+
+.actualTime {
+    float: right;
+    display: inline-block;
+    width: 310px;
+    width: 316px\9;
+    margin: 80px 48px 0 0;
+    border: 1px solid @border-black;
+    border-radius: 4px;
+    table th {
+        font-size: 12px;
+        color: #A1A6AD;
+        background: #2E323C;
+        padding: 20px 0 10px 0;
+        text-align: center;
+        width: 100px;
+    } //table tr{
+    //    background: #2E323C;;
+    //}
+    //table tr:nth-child(even){
+    //    background: #252830;;
+    //}
+    table tbody tr td:nth-child(2n) {
+        color: #fff;
+    }
+}
+
+//IE11
+*::-ms-backdrop,
+.actualTime {
+    width: 316px;
+}
+
+.dealList-cover {
+    max-height: 435px;
+    overflow-y: auto;
+}
+
+.dealUsrListMsg {
+    p {
+        font-size: 12px;
+        color: #A1A6AD;
+        background: #202129;
+        padding: 10px 0 10px 0;
+        text-align: center;
+        border-bottom: 1px solid #444851;
+        margin: 0;
+        i {
+            display: inline-block;
+            float: left;
+            font-size: 12px;
+            padding: 9px 0;
+            text-align: center;
+            line-height: 16px;
+            width: 98px;
+            height: 40px;
+            font-style: normal;
+            color: #A1A6AD;
+        }
+    }
+}
+
+//区块链当前交易
+.currentDealCover {
+    padding: 24px 0;
+    display: none;
+}
+
+.leftDealDetail {
+    float: left;
+    width: 40%;
+    padding-left: 50px;
+    .detailTitle {
+        font-size: 12px;
+        color: #A1A6AD;
+        b {
+            color: #fff;
+        }
+    }
+    .detailContent {
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+}
+
+.currentDeal {
+    width: 50%;
+    margin: 0 5%;
+    float: right; //padding: 0 0 12px 0;
+    .leftDealTime {
+        width: 70px;
+        float: left;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 10px;
+    }
+    .rightDealDetail {
+        //width:580px;
+        //float: left;
+        font-size: 12px;
+        position: relative;
+        ul {
+            margin: 0;
+            height: 50px;
+            background: #2E323C;
+            border-radius: 25px;
+            position: relative;
+            li {
+                display: inline-block;
+                float: left;
+                line-height: 50px;
+                margin-right: 20px;
+                height: 50px;
+                img {
+                    width: 30px;
+                    border-radius: 15px;
+                }
+                span {
+                    display: inline-block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 80px;
+                }
+                .dealDetails {
+                    width: 82px;
+                }
+            }
+            li.dealStatus {
+                width: 20px;
+                height: 20px;
+                margin: 15px;
+                padding: 0;
+                border-radius: 10px;
+                background: #fff;
+                text-align: center;
+                i {
+                    display: inline-block;
+                    width: 14px;
+                    height: 14px;
+                    background: #797979;
+                    border-radius: 7px;
+                    position: relative;
+                    top: -12px;
+                }
+            }
+            li.right-line {
+                position: absolute;
+                right: 0px;
+            }
+            li.lastDealStatus {
+                i {
+                    background: @color-blue;
+                }
+            }
+        }
+    }
+    .showDealWay {
+        position: relative;
+        i.dealWayLine {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: -30px;
+        }
+        i.line-lt {
+            background: url("../img/cicle-lt.svg") no-repeat left center;
+            left: -40px;
+        }
+        i.line-rt {
+            background: url("../img/cicle-rt.svg") no-repeat left center;
+            right: -84px;
+        }
+        p {
+            line-height: 22px;
+            font-size: 12px;
+            padding: 0 12px;
+            margin: 12px 0;
+            text-align: center;
+            position: relative;
+            i {
+                font-style: normal;
+                color: @font-color-grey;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.currentDealTab {
+    table-layout: fixed;
+    word-break: break-all;
+}
+
+.currentDealTab table tr td.assets-not-Confirm {
+    background: none;
+}
+
+.usrMsg {
+    position: absolute;
+    z-index: 9;
+    border: 2px solid @btn-bg-deep;
+    background: #252830;
+    width: 100%;
+    height: 200px;
+    top: -210px;
+    display: none;
+    img.big-img-lt {
+        float: left;
+        width: 20%; //height:100%;
+        padding: 20px 4%;
+    }
+    span.icon-seeMore {
+        display: inline-block;
+        position: absolute;
+        bottom: -20px;
+        left: 80px;
+        border: 10px solid @btn-bg-deep;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+    }
+    .rightMsg {
+        float: left;
+        width: 76%;
+        h1 {
+            font-size: 16px;
+            margin: 24px 0 0 0;
+        }
+        h2 {
+            font-size: 12px;
+            margin: 8px 0 0 0;
+            color: #A1A6AD;
+        }
+        h3 {
+            width: 20px;
+            height: 1px;
+            background: #A1A6AD;
+            margin: 8px 0 0 0;
+        }
+        .msgList {
+            margin-top: 16px;
+            .msg-lt,
+            .msg-rt {
+                width: 50%;
+                float: left;
+                p {
+                    font-size: 12px;
+                    color: #A1A6AD;
+                    b {
+                        display: inline-block;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 2px;
+                        background: @btn-bg-deep;
+                        vertical-align: middle;
+                        margin-left: 10px;
+                        position: relative;
+                        top: -1px;
+                    }
+                    b.limit {
+                        background: #ff5050;
+                    }
+                    i {
+                        color: #fff;
+                        font-style: normal;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .msg-rt {
+                p {
+                    background: #2E323C;
+                    line-height: 30px;
+                    border-radius: 4px;
+                    padding-left: 16px;
+                }
+            }
+        }
+    }
+}
+
+li.trans-deal {
+    color: #444851;
+    cursor: pointer;
+    i {
+        display: inline-block;
+        float: left;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        background: #444851;
+        margin: 16px 5px 0 0;
+        font-size: 12px;
+        text-align: center;
+        border-radius: 15px;
+        color: #001E21;
+    }
+}
+
+li.activity {
+    color: #007ae1;
+    i {
+        background: #007AE1;
+        color: #333;
+    }
+}
+
+//新增资产
+p.errorMsg {
+    color: #007AE1;
+    line-height: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.addAssetsIpt {
+    margin: 0 24px;
+    position: relative;
+    h3 {
+        color: #FFFFFF;
+        line-height: 40px;
+        margin: 0;
+        font-size: 12px;
+    }
+    p.storeFileName {
+        //width: 270px;
+        border: 1px solid #444851;
+        background: #2e323c;
+        border-radius: 5px;
+        line-height: 38px;
+        height: 40px;
+        padding: 0 12px;
+        font-size: 12px; //display: inline-block;
+        //float: left;
+        margin-right: 12px;
+        position: relative;
+        a {
+            display: inline-block;
+            border: 1px solid #444851;
+            line-height: 20px;
+            padding: 0 5px;
+            border-radius: 4px;
+            margin-right: 6px;
+            text-decoration: none;
+        }
+        span.removeUploadFile {
+            display: inline-block;
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            border: 1px solid #444851;
+            line-height: 20px;
+            padding: 0 5px;
+            border-radius: 4px;
+            margin-right: 6px;
+            color: #007AE1;
+        }
+    }
+    a.fileLimit {
+        font-size: 12px;
+        text-decoration: none;
+    }
+    input {
+        width: 270px;
+        border: 1px solid #444851;
+        background: #2e323c;
+        border-radius: 5px;
+        line-height: 38px;
+        padding-left: 24px;
+        font-size: 12px;
+        height: 38px;
+        display: inline-block;
+        float: left;
+        margin-right: 12px; //cursor: pointer;
+    }
+    .uploadFileBtn {
+        border-radius: 4px;
+        line-height: 24px;
+        height: 24px;
+        position: relative;
+        left: -132px;
+        top: -2px;
+    }
+    input.addFileBox {
+        display: inline-block;
+        width: 120px;
+        opacity: 0;
+        position: relative;
+        z-index: 999;
+        cursor: pointer;
+    }
+    input.uploadImg {
+        position: absolute;
+    }
+    p.fileLimit {
+        font-size: 12px;
+        color: @btn-bg-deep;
+        text-align: center;
+        margin: 10px 0;
+    }
+    a.selectOne {
+        display: inline-block;
+        float: left;
+        position: absolute;
+        left: 220px;
+        height: 38px;
+        width: 50px;
+        background: url(../img/data-drop-down.svg) center no-repeat;
+    }
+    a.addUsrSelect-one {
+        left: 120px;
+    }
+    h4 {
+        margin: 0;
+        color: #A1A6AD;
+        font-size: 12px;
+        display: inline-block;
+        float: left;
+        line-height: 18px;
+        width: 290px;
+    }
+    .getIptList {
+        position: absolute;
+        width: 270px;
+        border: 1px solid #999;
+        background: #444851;
+        border-radius: 4px;
+        top: 76px;
+        z-index: 999;
+        max-height: 157px;
+        overflow-y: auto;
+        p {
+            font-size: 12px;
+            color: #A1A6AD;
+            line-height: 24px;
+            padding: 0 12px;
+            border-bottom: 1px solid #444851;
+            margin: 0;
+        }
+        p:hover {
+            background: #007AE1;
+        }
+    }
+    .addUsrIptList {
+        width: 166px;
+    }
+}
+
+//用户管理
+i.addNewAssetIcon {
+    font-style: normal;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 8px;
+    background: #007AE1;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 5px;
+    color: #fff;
+}
+
+td.addNewAsset {
+    color: #007AE1;
+    cursor: pointer;
+}
+
+.left-img-upload {
+    float: left;
+    width: 180px;
+    margin: 24px;
+}
+
+.right-msg-upload {
+    float: left;
+    width: 430px;
+    .add-usr-name {
+        input {
+            width: 380px;
+        }
+    }
+    .add-usr-other {
+        float: left;
+        input {
+            width: 166px;
+            margin-right: 0;
+        }
+    }
+}
+
+.usrDetail-msg {
+    position: inherit;
+    display: block;
+    border: none;
+    height: inherit;
+}
+
+.usr-key {
+    margin: 16px 0 0 0;
+    .btn-create-key {
+        float: left;
+        border-radius: 4px;
+        margin-top: 0;
+        margin-right: 0;
+    }
+}
+
+.copy-key {
+    float: right;
+    margin-bottom: 16px;
+    width: 100%;
+    text-align: right;
+}
+
+.copy-key input {
+    width: 427px;
+    border: 1px solid #444851;
+    background: #2e323c;
+    border-radius: 5px;
+    line-height: 38px;
+    padding-left: 24px;
+    font-size: 12px;
+    height: 38px;
+    display: inline-block; //float: left;
+    margin-right: 12px;
+}
+
+.copy-key button.btn-copy-key {
+    border-radius: 4px;
+    border: 1px solid #444851;
+    background: #252830;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+i.setting-icon {
+    display: inline-block;
+    float: right;
+    font-size: 20px;
+    color: #007AE1;
+    width: 20px;
+    cursor: pointer;
+}
+
+.imgCover {
+    width: 200px;
+    height: 200px; //display: table-cell;
+    vertical-align: middle;
+    line-height: 200px;
+    text-align: center;
+    overflow: hidden;
+    img {
+        max-width: 80%;
+    }
+}
+
+button.limitAccount {
+    width: 60px;
+    height: 24px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: #007ae1;
+    color: #fff;
+}
+
+//button.limitAccount:hover{
+//    background: #ff5050;
+//    border:1px solid #ff5050;
+//}
+button.accountForbidden {
+    background: #ff5050;
+    border: 1px solid #ff5050;
+}
+
+//button.accountForbidden:hover{
+//    background: #007ae1;
+//    border: 1px solid #007ae1;
+//}
+.loadingAccount {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 26%;
+    z-index: 999;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+}
+
+
+
+
+// 节点列表
+.nodeTableList{
+    height:940px;
+    background:#252830;
+    border-radius:4px;
+    border:1px solid #444851;
+    .nodeTableList-header{
+        font-size: 16px;
+        color:#A1A6AD;
+        .total{
+            padding: 1 12px;
+            height:20px;
+            background:#444851;
+            border-radius:4px;
+            border:1px solid #2E323C;
+            color: #fff;
+        }
+    }
+}

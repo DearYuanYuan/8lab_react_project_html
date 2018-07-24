@@ -1,0 +1,405 @@
+    //headline style
+    @homeMainbg: #42495b;
+    @Topheight: 68px;
+    @LeftNavWidth: 240px;
+    @Topbg: #202129; //顶部的背景色
+    @LeftNavbg: #252830; //左侧边栏的背景色
+    @NavHoverbg: #2E323C; //nav hover和foucus的背景色
+    @NavActivebg: #007AE1; //nav active的背景色
+    @NavColor: #A1A6AE; //因为顶部用户栏，和侧边导航栏  所以每个section的类名定义为Home-page
+    .home-main {
+        width: 100%;
+        height: 100%;
+        padding: @Topheight 0 0 @LeftNavWidth;
+        background-color: @homeMainbg;
+    } // --------------------------------------------------------------nav侧边栏style  start
+    .fuzhou-nav {
+        position: fixed;
+        overflow: hidden;
+        height: 100%;
+        width: @LeftNavWidth;
+        list-style-type: none;
+        background: @LeftNavbg;
+        z-index: 209; //logo
+        .top-area {
+            a {
+                display: block;
+                height: @Topheight;
+            }
+        } //nav中间部分
+        .middle-area {
+            a {
+                font-size: 12px;
+                display: block;
+                height: 3.6em;
+                line-height: 3.6em;
+                text-align: center;
+                position: relative;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                text-decoration: none;
+                padding: 0 0;
+                color: @NavColor;
+                &:hover,
+                &:focus {
+                    background-color: @NavHoverbg;
+                    color: #fff;
+                }
+                &.active{
+                    background-color: @NavActivebg;
+                    color: #fff;
+                }
+            }
+            li {
+                img {
+                    position: absolute;
+                    left: 48px;
+                    top: 10px;
+                }
+                span {
+                    position: absolute;
+                    left: 80px;
+                }
+            }
+            ul.sub-nav {
+                li{
+                    position: relative;
+                }
+                .sub-active {
+                    color: #32A1FF;
+                }
+                li:first-child::before {
+                    content: ' ';
+                    position: absolute;
+                    left: 60px;
+                    top: 30%;
+                    width: 1px;
+                    height: 70%;
+                    background: #444851;
+                }
+                li::before {
+                    content: ' ';
+                    position: absolute;
+                    left: 60px;
+                    width: 1px;
+                    height: 100%;
+                    background: #444851;
+                    z-index: 201;
+                }
+                li:last-child::before {
+                    content: ' ';
+                    position: absolute;
+                    left: 60px;
+                    bottom: 30%;
+                    width: 1px;
+                    height: 70%;
+                    background: #444851;
+                }
+            }
+            .blockChain {
+                i {
+                    position: relative;
+                    left: 100px;
+                }
+            }
+        }
+    } //  --------------------------------------------------------------------------nav侧边栏style  end 
+    //顶部用户信息 start----------------
+    .top-banner {
+        height: @Topheight;
+        background-color: @Topbg;
+        position: fixed;
+        z-index: 300;
+        width: 100%;
+        color: @NavColor;
+        .homelogo {
+            position: absolute;
+            left: 32px;
+            width: 152px;
+            height: 66px;
+            background: url('../img/top-header-icon.png') repeat scroll -21px -26px;
+        }
+        .homelogo-shandong {
+            position: absolute;
+            left: 32px;
+            width: 152px; //height: 66px;
+            top: 12px;
+        }
+        .nav.pull-right {
+            height: 48px;
+            line-height: 48px;
+        }
+    } //顶部欢迎您  hover foucus active颜色
+    #basic-nav-dropdown {
+        color: #fff;
+        &:hover {
+            background-color: #007ae1;
+        }
+        &:focus {
+            background-color: #007ae1;
+        }
+        &:active {
+            background-color: #007ae1;
+        }
+        &:visted {}
+    } //顶部用户信息 end-------------------
+    .changePwdBox {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        z-index: 999;
+        background: #fff;
+        border-radius: 4px;
+        color: #000;
+    } //对付测试暂定样式   会删除~
+    .modal-content {
+        .form-control {
+            color: #000;
+        }
+    }
+
+    .globalSystem {
+        float: right;
+        margin: 25px 10px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .mask {
+        font-family: PingFangSC-Regular;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        font-size: 12px;
+    }
+
+    .communicationStyle {
+        background: #252830;
+        border-radius: 4px;
+        margin: auto; //padding: 22px;
+        box-sizing: border-box;
+            table a {
+                background-color: transparent;
+                border-radius: 4px;
+                width: 16px;
+                height: 16px;
+                display: block;
+                margin-left: 20px;
+                cursor: pointer;
+                border: 1px solid #fff;
+                box-sizing: border-box;
+            }
+            table .onSelect {
+                background-color: #32a1ff;
+            }
+            margin-top: 26px;
+            h6 {
+                font-size: 12px;
+                color: #A1A6AD;
+            }
+    }
+
+    .enabled-communication,
+    .disable-communication {
+        margin-top: 30px;
+        h6 {
+            float: left;
+        }
+        .enabled-del,
+        .enabled-dis,
+        .enabled-add {
+            float: right;
+            margin: 10px;
+            font-family: PingFangSC-Semibold;
+            color: #32A1FF;
+            cursor: pointer;
+        }
+        .enabled-del {
+            color: #CB4B4B;
+        }
+    }
+
+    .enabled-content {
+        height: 470px;
+        background: #202129;
+        border: 1px solid #444851;
+        border-radius: 4px;
+        text-align: center;
+        overflow-y: auto;
+        thead th,
+        tbody td {
+            line-height: 36px;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        thead th {
+            text-align: center;
+        }
+        tr {
+            // height: 38px;
+            box-sizing: border-box;
+        }
+    }
+
+    .enabledSys-checkbox {
+        left: 0px;
+        top: 10px;
+    }
+
+    .enabledSys-checkbox::after {
+        top: -9px !important;
+    }
+
+    .enbaled-addInput {
+        width: 120px;
+        height: 38px;
+        border-radius: 4px;
+        font-size: 12px;
+        background-color: transparent;
+        color: #fff;
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+    }
+
+   .enabled-content a.onSelect {
+        background-color: #32a1ff;
+        border: none;
+        width: 16px;
+        height: 16px;
+        display: block;
+        border-radius: 4px;
+        margin-left: 20px;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 1440px) {
+        .fuzhou-nav .middle-area a {
+            line-height: 2.8rem;
+            height: 2.8rem;
+        }
+    } //新增通用设置
+    .globalSystem-tab {
+        border-bottom: 1px solid #444851;
+        padding-left: 16px;
+        margin-top: 14px;
+        li {
+            display: inline-block;
+            float: left;
+            background: #2E323C;
+            border: 1px solid #444851;
+            border-radius: 4px 4px 0 0;
+            height: 38px;
+            line-height: 38px;
+            margin-left: 8px;
+            font-size: 14px;
+            padding: 0 16px;
+            position: relative;
+            top: 1px;
+            cursor: pointer;
+        }
+        li.globalSystem-set-active {
+            background: #252830;
+            border-bottom: 1px solid #252830;
+        }
+    }
+
+    .globalSystemSetNormal {
+        padding: 0 22px 22px 22px;
+        h2 {
+            font-size: 16px;
+            margin-bottom: 16px;
+            margin-top: 36px;
+        }
+    }
+
+    .writeTime {
+        padding-bottom: 36px;
+        border-bottom: 1px solid #444851;
+        h3 {
+            font-size: 12px;
+        }
+        input {
+            border: 1px solid #D9D9D9;
+            border-radius: 4px;
+            width: 540px;
+            height: 38px;
+            line-height: 38px;
+            background: #252830;
+            padding-left: 16px;
+        }
+        p {
+            font-size: 12px;
+            color: #A1A6AD;
+        }
+    }
+
+    .userSelectSet {
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        width: 540px;
+        height: 38px;
+        line-height: 38px;
+        background: #252830;
+        padding-left: 16px;
+    }
+
+    .selectSetList {
+        width: 540px;
+        background: #252830;
+        border: 1px solid #007AE1;
+        border-top: none;
+        border-radius: 4px;
+        cursor: pointer;
+        p {
+            height: 38px;
+            line-height: 38px;
+            margin: 0;
+            padding-left: 16px;
+        }
+        p:hover {
+            background: #007AE1;
+        }
+    }
+
+    .userSetConfimBtn {
+        margin-top: 70px;
+        input {
+            border-radius: 4px;
+        }
+        .userSetConfirm {
+        }
+    }
+
+    .certificateRow {
+        margin-top: 10px;
+        height: 40px;
+        width: 100%;
+        >div {
+            width: 33.3%;
+            float: left;
+        }
+        a {
+            background-color: transparent;
+            width: 16px;
+            height: 16px;
+            display: block;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            box-sizing: border-box;
+            float: left;
+            border: 1px solid #A1A6AD;
+        }
+        .cer-username a {
+            background: #444851;
+            cursor: not-allowed;
+        }
+        .onSelect {
+            background-color: #32a1ff;
+            border: none
+        }
+    }

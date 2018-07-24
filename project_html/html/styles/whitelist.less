@@ -1,0 +1,249 @@
+@whitelistColor: #202129;
+@whitelistPath: "../img/"; //static下的路径 使用方法  例:background: url("@{static}tool.png")
+@addDeleteHover: #ccc;
+// whitetable头部样式控制
+.whiteListButton {
+    //position: absolute;
+    //top: 81px;
+    //left: 264px;
+
+    margin: 10px 20px 20px 20px;
+    >button {
+        margin-right: 24px;
+        margin-top: 10px;
+    }
+}
+
+.whiteListSearch {
+    float: right;
+    margin: 10px 18px 0 0;
+}
+
+.whiteListTitle {
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 38px 0 0 24px;
+}
+.whiteList-content{
+    margin: 0;
+    border: 1px solid #444851;
+    background:  @whitelistColor;
+    border-radius: 4px;
+}
+.wl-header {
+    // height: 80px;
+    // width: 100%;
+    // position: relative;
+    //position: fixed;
+    //right: 0px;
+    //top: 68px;
+    //height: 139px;
+    //width: 100%;
+    //background: #2e323c;
+    //padding-left: 240px;
+    //display: flex;
+    //justify-content: space-between;
+    .white-add,
+    .white-delete {
+        position: absolute;
+        top: 12px;
+        width: 80px;
+        height: 30px;
+        border: 1px solid rgba(101, 107, 123, 1);
+        border-radius: 3px;
+        &:hover {
+            background: @addDeleteHover;
+            cursor: pointer;
+        }
+    }
+    .white-delete {
+        margin-left: 120px;
+    }
+    .img-add,
+    .img-delete {
+        width: 20px;
+        height: 20px;
+        background: url("@{whitelistPath}white-icon.png") no-repeat -55px -89px;
+        display: inline-block;
+        cursor: pointer;
+        line-height: 51px;
+        text-align: center;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    .img-delete {
+        background: url("@{whitelistPath}white-icon.png") no-repeat -37px -89px;
+    } //add和delate文字位置
+    .text-white {
+        position: absolute;
+        right: 15px;
+        top: 5px;
+    }
+}
+
+// whitelist表格样式占宽度控制
+.whitelist {
+    padding: 20px;
+    padding-top: 0px;
+    background-color: @whitelistColor;
+    position: relative;
+    color: #fff;
+    .white-tr {
+        overflow: hidden;
+        >div {
+            vertical-align: bottom;
+            float: left;
+            line-height: 60px;
+            overflow: hidden;
+        }
+    } //按钮样式
+    .wl-select {
+        width: 1.6%;
+        margin-top: 23px;
+        min-width: 24px;
+    }
+    .wl-index {
+        width: 10%;
+    }
+    .wl-type {
+        width: 10%;
+    }
+    .wl-filedata-num {
+        width: 29%;
+    }
+    .wl-filename-hint {
+        width: 29%;
+    }
+    .wl-filename-ip {
+        width: 12%;
+    }
+    .wl-filename-operate {
+        width: 6%;
+    }
+    .wl-ip {
+        width: 12%;
+    }
+}
+
+//button选中and未选中的样式
+.select-all,
+.white-checked {
+    width: 20px;
+    height: 20px;
+    background: url("@{whitelistPath}white-icon.png") no-repeat -8px -35px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.white-checked {
+    background: url("@{whitelistPath}white-icon.png") no-repeat -8px -5px;
+}
+
+// table-->tr下的操作单条数据样式
+.img-write,
+.img-delete {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    background: url("@{whitelistPath}white-icon.png") no-repeat -8px -89px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 7%;
+}
+
+.img-delete {
+    background:url("@{whitelistPath}white-icon.png") no-repeat -37px -89px;
+}
+
+.whiteListTable {
+    margin-top: 159px;
+    border: 1px solid #444851;
+    border-radius: 4px;
+    .thead,
+    .white-tr {
+        padding-left: 1%;
+    }
+}
+
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #9F86FF;
+    font-size: 12px;
+}
+
+//bootstarp弹窗组件的默认样式修改
+.modal-backdrop {
+    background-color: transparent;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999
+}
+
+.modal-content {
+    background: #2e323c;
+}
+
+.modal-content {
+    .form-control {
+        color: #fff
+    }
+}
+
+#modifyWLModal .modal-dialog {
+    margin: 200px auto;
+}
+
+.form-horizontal input:focus {
+    border-color: #66afe9 !important;
+    border-top: 1px!important;
+    border-left: 1px!important;
+    border-right: 1px!important;
+    border-bottom: 2px !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+// .modal-body{
+//     .form-horizontal{
+//         .form-control{
+//              color: #fff
+//         }
+//     }
+// }
+//----------------------------------------------------------------------table
+.whiteListTable {
+    font-size: 12px;
+    background-color: #252830;
+    text-align: center;
+    .thead {
+        height: 60px;
+        background-color: #252830;
+        >div {
+            line-height: 60px;
+            float: left;
+        }
+    }
+    .tr {
+        height: 60px;
+    }
+    .tr:nth-child(odd) {
+        background-color:  #2E323C;
+    }
+    .tr:nth-child(even) {
+        // background-color: rgba(204,241,242,0.2);
+        //  background-color: blue;
+    }
+    .tr:hover {
+        // background-color: rgba(35,193,198,0.5);
+    }
+    .thead:last-child {
+        float: none;
+    }
+}
+
+
+.whiteError{
+        margin-top: 165px
+}

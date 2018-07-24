@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="91px" height="91px" viewBox="0 0 91 91" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="系统检测" transform="translate(-264.000000, -88.000000)" stroke-width="3">
+            <g id="title_bar" transform="translate(240.000000, 64.000000)">
+                <g id="Group" transform="translate(24.000000, 24.000000)">
+                    <circle id="Oval-3" stroke="#6AD400" cx="45.5" cy="45.5" r="44"></circle>
+                    <polyline id="Path-3" stroke="#72D500" stroke-linecap="round" stroke-linejoin="round" points="23 43.9179228 40.4582397 60.4029692 68.8612089 32"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

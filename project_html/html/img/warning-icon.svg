@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="40px" viewBox="0 0 36 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="notification/complex" transform="translate(-26.000000, -24.000000)">
+            <g id="Group-5" transform="translate(24.000000, 24.000000)">
+                <rect id="guide" x="1" y="0" width="40" height="40"></rect>
+                <path d="M20.0000082,0 C23.7479566,3.92466667 29.7378488,4.90233333 35.850071,3.43733333 C44.6469895,26.272 23.8556566,40 20.0000082,40 C16.1443271,40 -4.64690778,26.272 4.14988004,3.43733333 C10.2621676,4.90233333 16.2520272,3.92466667 20.0000082,0 Z M20,30 C20.8284271,30 21.5,29.3284271 21.5,28.5 C21.5,27.6715729 20.8284271,27 20,27 C19.1715729,27 18.5,27.6715729 18.5,28.5 C18.5,29.3284271 19.1715729,30 20,30 Z M18.5,10 L19.1,25 L20.9,25 L21.5,10 L18.5,10 Z" id="Page-1-Copy" fill="#FB624E"></path>
+            </g>
+        </g>
+    </g>
+</svg>

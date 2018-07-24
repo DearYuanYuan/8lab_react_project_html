@@ -1,0 +1,778 @@
+.tamper-list-li {
+    margin: 24px 24px 0 24px;
+    border-bottom: 1px solid #444851;
+    line-height: 40px;
+    font-size: 12px;
+    color: #A1A6AD;
+}
+
+.version-msg-list table {
+    width: 100%;
+    thead,
+    tbody {
+        width: 100%;
+    }
+    thead tr {
+        background-color: #252830;
+        color: #fff;
+    }
+    tbody tr {
+        color: #fff;
+    }
+    tbody tr:nth-child(2n) {
+        background-color: #252830;
+    }
+    tbody tr:nth-child(2n+1) {
+        background-color: #2e323c;
+    }
+    tbody td:nth-child(2n) {
+        color: #fff
+    }
+}
+
+
+.userMangeCtr{
+    padding: 20px 24px 10px;
+    >button{
+        margin: 0 20px 0 0;
+    }
+    .searchPlugin{
+        .form-control{
+            display: inline-block;
+        }
+        >button{
+            margin-left: 20px;
+        }
+    }
+}
+.userDataList table {
+    tbody tr td:nth-child(4) {
+        // color: #32a1ff;
+        cursor: pointer;
+    }
+
+    .select{
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+    }
+    .onselect{
+        border: none;
+        background: #007AE1;
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+
+
+    .authorized{
+        cursor: pointer;
+        text-align: center;
+        width: 40px;
+        line-height: 23px;
+        background: #007AE1;
+        border-radius: 4px;
+    }
+    .unauthorized{
+        cursor: pointer;
+        text-align: center;
+        width:52px;
+        line-height: 23px;
+        background: #CB4B4B;
+        border-radius: 4px;
+    }
+}
+
+.tamperStatus {
+    position: relative;
+    z-index:88;
+}
+
+.tamperStatus table {
+    tbody{
+        font-size: 12px;
+    }
+    tbody tr td:nth-child(2) {
+        color: #32a1ff
+    }
+}
+
+.operation {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    .deleteServer {
+        border: 1px solid #FFFFFF;
+        background-color: transparent;
+    }
+    .addServer {
+        border: none;
+        background: #007AE1;
+    }
+}
+
+.operation button {
+    width: 120px;
+    height: 38px;
+    color: #fff;
+    margin-right: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: PingFangSC-Semibold;
+    font-size: 12px;
+}
+
+.searchServer {
+    position: absolute;
+    right: 30px;
+    top: -160px;
+    font-size: 12px;
+    input[type='text'] {
+        width: 210px;
+        height: 38px;
+        border: 1px solid #444851;
+        border-radius: 4px;
+        background-color: transparent;
+        padding-left: 20px;
+        margin-right: 20px;
+    }
+    input[type='submit'] {
+        width: 120px;
+        height: 38px;
+        background: #007AE1;
+        border-radius: 4px;
+    }
+}
+
+.clientDataList table {
+    font-size: 12px;
+    thead {
+        font-size: 14px;
+    }
+    tbody tr td:nth-child(1) {
+        color: #32a1ff
+    }
+    tbody tr td:nth-child(4) {
+        color: #32a1ff
+    }
+    tbody tr td:nth-child(5) {
+        color: #32a1ff
+    }
+}
+
+.ClientError {
+    line-height: 50px;
+    margin-top: 50px;
+    margin-left: 25px;
+    color: #28a3ef;
+}
+.rootDic .ClientError{
+    margin-left: 0
+}
+.watchStatus {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    left: -5px;
+    &.protected {
+        background-color: #007AE1;
+    }
+    &.timeout {
+        background-color: red;
+    }
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue
+}
+
+// .statusColor {}
+.selectArrow {
+    width: 30px;
+    height: 10px;
+}
+
+#displayTpye {
+    position: absolute;
+    right: 24px;
+    top: 120px;
+    z-index: 200;
+}
+
+.tamerSelAll {
+    left: -30px;
+    top: 9px;
+}
+
+.tamperCheckbox {
+    top: 8px;
+    left: -25px;
+}
+
+.tamper-list-li6 {
+    cursor: pointer;
+}
+
+.userDetailManage {
+    margin: 24px;
+    img {
+        width: 130px;
+        height: 130px;
+        margin-right: 30px;
+        float: left;
+    }
+    .userIntroduce {
+        float: left;
+        >p {
+            font-family: PingFangSC-Semibold;
+            font-size: 12px;
+            color: #A1A6AD;
+        }
+        .userManageLine {
+            width: 20px;
+            height: 1px;
+            background: #444851;
+            margin-bottom: 8px;
+        }
+    }
+    .userManageContact {
+        float: left;
+        margin-left: 55px;
+        margin-top: 55px;
+        >div {
+            background: #2E323C;
+            border-radius: 4px;
+            width: 290px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            margin: 10px;
+            .icon-left{
+                float:left;
+                width: 14px;
+                text-align: center;
+            }
+        }
+        span {
+            color: #A1A6AD;
+        }
+        .userManage-left {
+            float: left;
+            width: 30%;
+            text-align: center;
+        }
+        i {
+            margin-top: 8px
+        }
+    }
+}
+
+.userDetailManage-bottom {
+    margin-top: 60px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #A1A6AD;
+}
+
+.addressableServer {
+    td {
+        cursor: pointer;
+    }
+}
+
+.addressableServer,
+.rootDic {
+    width: 25%;
+    float: left; // background: #2E323C;
+    margin-right: 10%;
+    border-radius: 5px;
+    >p {
+        margin-bottom: 25px;
+        float: left;
+    }
+    .addRootDic,
+    .allotRootDic,
+    .deleteRootDic,
+    .svnDeleteRootDic {
+        text-align: center;
+        float: right;
+        width: 120px;
+        line-height: 28px;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+        margin-left: 10px;
+        color: #fff;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .allotRootDic {
+        background: #007AE1;
+        border: none;
+        margin-bottom: 27px;
+    }
+    .deleteRootDic {
+        position: absolute;
+        top: 76px;
+        left: 4px;
+        float: left;
+    }
+    table {
+        background: #202129;
+        border: 1px solid #444851;
+        border-radius: 4px;
+        th,
+        td {
+            line-height: 36px;
+            padding: 0;
+            padding-left: 24px;
+            >span {
+                position: relative;
+                top: -7px;
+            }
+        }
+        td:nth-child(2) {
+            color: #ccc
+        }
+        th {
+            padding-top: 20px;
+            background: #202129;
+        }
+        .manageCheckbox {
+            position: relative;
+            right: 10px;
+            top: 9px;
+        }
+        label:after {
+            top: -8px !important;
+        }
+    }
+}
+
+.rootDic {
+    margin: 0;
+    width: 65%;
+    position: relative;
+    table {
+        th {
+            padding-top: 54px;
+        }
+    }
+}
+
+.manageCheckbox {
+    margin-top: 18px;
+}
+
+.addRootPathMask {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, .3)
+}
+
+.addRootPath {
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    .content {
+        width: 660px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -330px;
+        margin-top: -284px;
+        background: #252830;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.57);
+        border-radius: 4px;
+        padding: 15px;
+        z-index: 109;
+        .header {
+            font-size: 14px;
+            color: #A1A6AD;
+            border-bottom: 1px solid #444851;
+            padding-bottom: 18px;
+            margin-top: 10px;
+            i {
+                float: right;
+                cursor: pointer;
+            }
+        }
+        .search {
+            margin: 20px 0 15px;
+            input {
+                border: 1px solid #444851;
+            }
+            button {
+                background: #007AE1;
+                border-radius: 4px;
+                width: 120px;
+                height: 38px;
+                margin-left: 35px;
+            }
+        }
+        .liesClient {
+            padding: 15px 0;
+            font-family: PingFangSC-Semibold;
+            font-size: 12px;
+            color: #FFFFFF;
+        }
+        .createDirc {
+            margin-top: 20px;
+            text-align: center;
+            width: 120px;
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid #FFFFFF;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .nominate {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    }
+    .userinfo {
+        margin-top: 18px;
+        font-size: 12px;
+        >div {
+            float: left;
+            margin-right: 20px;
+        }
+    }
+    input {
+        font-size: 12px;
+        border: 1px solid #D9D9D9;
+        border-radius: 4px;
+        width: 270px;
+        height: 38px;
+        line-height: 38px;
+        color: #D9D9D9;
+        background-color: transparent;
+        padding-left: 18px;
+        box-sizing: border-box;
+    }
+    .pathOperation {
+        float: right;
+        margin: 20px 0 10px 0;
+        >button {
+            font-size: 12px;
+            width: 120px;
+            height: 28px;
+            border-radius: 4px;
+            background-color: transparent;
+            color: #fff;
+            box-sizing: border-box;
+            margin-left: 19px;
+        }
+        .pathCancel {
+            border: 1px solid #FFFFFF;
+        }
+        .pathSave {
+            background: #007AE1;
+        }
+    }
+}
+
+.fileDirectory {
+    width: 100%;
+    height: 272px;
+    background: #2E323C;
+    border-radius: 4px;
+    overflow: auto;
+    padding: 20px;
+    .colFileDir {
+        width: 100%;
+        margin-top: 8px;
+        i {
+            float: left;
+            color: #9B9B9B;
+            margin: 5px 6px 0;
+        }
+    }
+    .showAllFile {
+        width: 14px;
+        height: 14px;
+        background: #007AE1;
+        border-radius: 2px;
+        float: left;
+        cursor: pointer;
+        margin: 2px;
+    }
+    .hideAllFile {
+        width: 14px;
+        height: 14px;
+        background: transparent;
+        border: 1px solid #A1A6AD;
+        border-radius: 2px;
+        float: left;
+        cursor: pointer;
+        margin: 2px;
+    }
+    .fileName {
+        float: left;
+    }
+    .thead {
+        margin-top: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #444851;
+        color: #A1A6AD;
+        >div {
+            float: left;
+            &:nth-child(1) {
+                width: 5%;
+            }
+            &:nth-child(2) {
+                width: 48%;
+                margin-right: 2%;
+            }
+            &:nth-child(3) {
+                width: 45%;
+            }
+        }
+    }
+}
+
+.userinfo {
+    input {
+        margin: 8px 0;
+    }
+}
+
+.AllotRootPath {
+    font-size: 12px;
+    width: 660px;
+    background: #252830;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.57);
+    border-radius: 4px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -330px;
+    margin-top: -234px;
+    padding: 0 15px;
+    z-index: 123;
+    .header {
+        height: 48px;
+        line-height: 48px;
+        border-bottom: 1px solid #444851;
+        font-size: 14px;
+        color: #A1A6AD;
+        margin-bottom: 20px;
+    }
+    .line {
+        height: 1px;
+        background: #444851;
+        margin: 20px 0;
+    }
+    .nameDic,
+    .rootName {
+        font-size: 12px;
+        color: #FFFFFF;
+        margin-top: 18px;
+        input {
+            margin: 8px 0;
+        }
+    }
+    .AllotOpration {
+        float: right;
+        margin: 20px 0;
+        >button {
+            font-size: 12px;
+            width: 120px;
+            height: 28px;
+            border-radius: 4px;
+            background-color: #007AE1;
+            ;
+            color: #fff;
+            box-sizing: border-box;
+            margin-left: 19px;
+        }
+        .cancelOpration {
+            border: 1px solid #FFFFFF;
+            background-color: transparent;
+        }
+    }
+}
+
+.rootSingleRow {
+    width: 100%;
+    line-height: 24px;
+    height: 24px;
+    overflow: hidden;
+    .checkSingle {
+        cursor: pointer;
+        width: 5%;
+        float: left;
+        position: relative;
+        &::after {
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            margin-top: -7px;
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+        &.slector {
+            &::after {
+                background: #007AE1;
+            }
+        }
+        &.cancel {
+            &::after {
+                background: transparent;
+                border: 1px solid #A1A6AD;
+            }
+        }
+    }
+    .rootAlias {
+        width: 48%;
+        float: left; // overflow: hidden;
+        margin-right: 2%;
+        .fa-folder {
+            color: #A1A6AD;
+            position: relative;
+            float: left;
+            width: 5%;
+            margin-top: 5px;
+            margin-right: 3%;
+        }
+        span {
+            float: left;
+            width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .absoluteRoot {
+        width: 45%;
+        float: left;
+    }
+}
+
+.showRootList {
+    display: none;
+}
+
+.userDataTable {
+    width: 100%;
+    .thead {
+        width: 100%;
+        >div {
+            float: left;
+            line-height: 60px;
+            text-align: center;
+            padding: 0 10px;
+            
+            &:nth-child(1) {
+                width: 10%;
+            }
+            &:nth-child(2) {
+                width: 10%;
+            }
+            &:nth-child(3) {
+                width: 10%;
+            }
+            &:nth-child(4) {
+                width: 10%;
+            }
+            &:nth-child(5) {
+                width: 15%;
+            }
+            &:nth-child(6) {
+                width: 35%;
+            }
+            &:nth-child(7) {
+                width: 10%;
+            }
+           
+        }
+      
+    }
+
+    .tbodyRow{
+        width: 100%;
+        font-size: 12px;
+        &:nth-child(odd){
+            background-color: #2e323c;
+        }
+        >div {
+            float: left;
+            line-height: 60px;
+            height: 60px;
+            text-align: center;
+            overflow: hidden;
+            padding: 0 10px;
+            display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+            &:nth-child(1) {
+                // padding-left: 10px;
+                width: 10%;
+            }
+            &:nth-child(2) {
+                width: 10%;
+            }
+            &:nth-child(3) {
+                width: 10%;
+            }
+            &:nth-child(4) {
+                width: 10%;
+            }
+            &:nth-child(5) {
+                width: 15%;
+            }
+            &:nth-child(6) {
+                width: 35%;
+            }
+            &:nth-child(7) {
+                width: 10%;
+                overflow: hidden;
+            
+            }
+        }
+    }
+}
+
+//filePath  样式修改
+.ztree li span.button.switch {
+    margin: 8px 10px 0px;
+    width: 14px;
+    height: 14px;
+    //padding: 8px;
+}
+
+.ztree li span.button.noline_close {
+    border-radius: 2px;
+    background: #252830 url("../img/tree-close.png") no-repeat center;
+    background-size: 80%;
+}
+
+.ztree li span.button.noline_open {
+    background:  #252830 url("../img/tree-down.png") no-repeat center;
+    border-radius: 2px;
+    background-size: 80%;
+}

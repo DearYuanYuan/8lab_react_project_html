@@ -1,0 +1,7 @@
+//audit rpc 服务 处理audit所有远程调用
+service AuditRPCService {
+    i32 delete_all(1:string type), //删除所有的用户或者行为
+    i32 delete_part(1:list<string> names, 2:string type), // 删除一条或者多条用户或者行为
+    i32 add(1:string names, 2:string type), // 增加一条或者多条用户或者行为
+    string test(1:string msg)
+}

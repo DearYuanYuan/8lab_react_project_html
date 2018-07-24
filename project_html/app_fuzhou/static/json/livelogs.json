@@ -1,0 +1,29 @@
+{
+  "logs":[
+    [
+        "2016-07-21 14:44:42",
+        "DEBUG",
+        "[7f870a7fc700] (logger) Request GET /api/logs?source=api&level=DEBUG&max_entries=5000&_=1468996276012 from 127.0.0.1:38838 "
+    ],
+    [
+        "2016-07-20 14:44:40",
+        "INFO",
+        "[7f870a7fc700] (logger) Response code '200 OK' for GET /api/logs?source=api&level=DEBUG&max_entries=5000&_=1468996276017 from 127.0.0.1:38838"
+    ],
+    [
+        "2016-07-20 14:44:40",
+        "ERROR",
+        "[7f870bfff700] (logger) Response code '200 OK' for GET /api/logs?source=api&level=DEBUG&max_entries=5000&_=1468996276018 from 127.0.0.1:38839"
+    ],
+    [
+        "2016-07-19 14:44:40",
+        "INFO",
+        "[7f870a7fc700] (logger) Response code '200 OK' for GET /api/logs?source=api&level=DEBUG&max_entries=5000&_=1468996276017 from 127.0.0.1:38838"
+    ],
+    [
+        "2016-07-18 14:44:40",
+        "ERROR",
+        "[7f870bfff700] (logger) Response code '200 OK' for GET /api/logs?source=api&level=DEBUG&max_entries=5000&_=1468996276018 from 127.0.0.1:38839"
+    ]
+  ]
+}

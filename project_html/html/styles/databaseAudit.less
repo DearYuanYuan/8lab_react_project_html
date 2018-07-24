@@ -1,0 +1,516 @@
+/*
+数据库审计标签页的样式
+created by ZHONG Mengting
+on 2017/04/21
+*/
+
+//define size
+@spacing-module:24px;           //模块间的间距
+@header-height:139px;           //标签页头部的高度
+@chart-height:350px;            //图表模块的高度
+@default-fontSize:12px;         //默认文字大小
+@title-fontSize:20px;           //标题文字大小
+//define colors
+@module-bcColor:#252830;            //模块的背景色
+@main-light-bcColor: #2e323c;       //较亮的主体背景色(头部,白名单窗口,列表行)
+@main-bcColor:#202129;              //标签页主体容器的背景色
+@main-fontColor:#fff;               //主要的文字颜色
+@second-fontCOlor:#A1A6AD;          //第二种文字颜色
+@third-fontCOlor:#A1A6AD;           //第三种文字颜色
+@chart-gradient-top-1:#9F86FF;      //图表渐变色
+@chart-gradient-bottom-1:#46287C; 
+@chart-gradient-top-2:#007AE1;
+@chart-gradient-bottom-2:#10328E;
+@module-borderColor:#444851;        //图表模块的表框颜色(以及横线等边界的颜色)
+
+//标签页的头部 -------------------------------START
+.dbAudit-header{
+    z-index: 1;
+    width: 100%;
+    padding: @spacing-module  @spacing-module  @spacing-module @spacing-module;
+    background: @main-light-bcColor; 
+    font-size: @default-fontSize;
+    /*头部左侧状态图标的样式*/
+    .dbAudit-header-logo{
+        float:left;
+        margin-right:@spacing-module;
+        width: 91px;
+        height: 91px;
+        background: url("../img/systemCheck/status.svg");
+    }
+    /*头部左侧状态描述*/
+    .dbAudit-header-status{
+        float:left;
+        margin-top: 18px;
+        .status-discrip{
+            margin:5px 0 8px 0;
+            font-size: @title-fontSize;
+        }
+    }
+    /*头部右侧按钮标签的样式*/
+    .bt-label{
+        float:right;
+        margin: 20px;
+        width: 40px;
+        height: 17px;             
+    }
+    /*头部右侧的按钮组*/
+    .button-group{
+        float:right;
+        margin-top: 10px;
+        .button-whitelist{
+            margin-top:10px;
+            margin-left:12px;
+            float: right;
+        }            
+    }
+}
+.btn-toolbar{
+    display: inline-block;
+    margin-left:2px;
+}
+//白名单操作按钮的弹窗--------START
+.whitelist-setting.is-showed{
+    display:inline;    
+}
+.whitelist-setting{
+    display:none;
+    position:fixed;
+    overflow-y: scroll;
+    height: 77%;
+    z-index: 999;
+    top:0;
+    right: 0;
+    width: 440px;
+    background-color: @main-light-bcColor;
+    box-shadow:-3px 2px 15px #000;    
+    padding: @spacing-module @spacing-module 0;
+    margin-top:68px;
+    transition:all 0.3s linear; 
+    font-size: @default-fontSize;   
+    //标题
+    p.settingTitle{
+        font-size: @title-fontSize;
+    }
+    //导航栏
+    .setting-tabs{   
+        margin-top: 25px;
+    }
+    .setting-tabs ul{
+        margin-bottom: 0;
+        border-bottom: 1px #444851 solid;
+    }
+    .setting-tabs ul li{
+        display: inline-block;
+        width:50%;
+        text-align: center;        
+        border-bottom: 1px @module-borderColor  solid;
+        padding-bottom:11px;
+    }
+    .setting-tabs ul li.current{
+        color:#32a1ff;
+        border-bottom: 1px #32a1ff solid;
+    }
+    //标签页
+    .tab-content{
+        width:100%;
+        margin-top:23px;
+        color:#3F3F3F;
+        //搜索白名单用户或行为的输入框
+        .form-inline .form-group{
+            width:100%;
+        }
+        .input-style{
+            width:184px;
+            height:38px;
+            background-color:transparent;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        //搜索按钮
+        .bt-search{
+            width:184px;
+        }
+        //添加按钮
+        .bt-add{
+            width:184px;
+            float:right;
+        }
+        //标签页的列表
+        ul.list-user-name,ul.list-user-action{
+            color: @main-fontColor;
+            margin:@spacing-module -@spacing-module 0 -@spacing-module;
+            li{
+                height:60px;
+                padding:22px 25px;
+                span{
+                    margin-left:28px;
+                    vertical-align: top;
+                }
+            }
+            //列表头部
+            .li-title{
+                height:60px;
+                padding:16px 25px;                
+                div .bt-delete{
+                    float:right;
+                }
+                span{
+                    line-height:30px;
+                    margin-left: 46px;
+                }
+            }
+            li p{
+                margin-left: 45px;
+            }
+            li:nth-child(2n) {
+                background: @main-light-bcColor;
+            }
+            li:nth-child(2n+1) {
+                background: @module-bcColor;
+            }
+        }
+        .pagination-all{
+            width:auto;
+            margin:0 -@spacing-module
+        }
+    }
+    //隐藏的标签页
+    .tab-content.hidden-block{
+        display:none;
+    }
+}
+// 滚动条
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+.whitelist-setting::-webkit-scrollbar  
+{  
+    width: 10px;  
+    height: 16px;  
+    background-color: @bg-cover-black;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+.whitelist-setting::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 6px;  
+    background-color: @bg-cover-black;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+.whitelist-setting::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: @btn-bg-deep;  
+} 
+//白名单操作按钮的弹窗---------END
+
+//标签页的头部 -------------------------------END
+
+//主体部分---------------------------------START
+/*主体部分被分成多行,图表均匀地展示*/
+.dbAudit-main{
+    width: 100%;
+    background-color:@main-bcColor;
+    padding: @spacing-module 0;
+    font-size: @default-fontSize;
+    //图表模块,日志模块都是白色圆角卡片的样式
+    .chart-container,.logs-container{
+        background: @module-bcColor;
+        border: 1px solid @module-borderColor;
+        border-radius: 4px;
+        height:100%;
+        position: relative;
+        // padding:@spacing-module @spacing-module 0 @spacing-module;
+
+        //自定义柱状图中图例的样式
+        .legends-group{
+            position:absolute;
+            margin-left: 26px;
+            margin-top: 15px;
+            display: flex;
+            .legend-one,.legend-two{
+                border-radius: 29px;
+                width:40px;
+                height:20px;
+            }
+            .legend-one{
+                background: -webkit-linear-gradient(bottom, @chart-gradient-top-1 , @chart-gradient-bottom-1); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(bottom, @chart-gradient-top-1 , @chart-gradient-bottom-1); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(bottom, @chart-gradient-top-1 , @chart-gradient-bottom-1); /* Firefox 3.6 - 15 */
+                background: linear-gradient(to bottom, @chart-gradient-top-1 , @chart-gradient-bottom-1); /* 标准的语法（必须放在最后） */
+            }
+            .legend-two{
+                background: -webkit-linear-gradient(bottom, @chart-gradient-top-2 , @chart-gradient-bottom-2); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(bottom, @chart-gradient-top-2 , @chart-gradient-bottom-2); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(bottom, @chart-gradient-top-2 , @chart-gradient-bottom-2); /* Firefox 3.6 - 15 */
+                background: linear-gradient(to bottom, @chart-gradient-top-2 , @chart-gradient-bottom-2); /* 标准的语法（必须放在最后） */
+            }
+            //图例中的说明文字
+            p{
+                margin-left:8px;
+                margin-right: @spacing-module;
+            }
+        }
+        //所有图表
+        #first-barchart,#second-barchart, #first-piechart, #second-piechart,#third-piechart{
+            position: absolute;
+            margin-top:5px;
+            height:70%;
+            width: 100%;
+            box-sizing: border-box;
+            margin:0
+        }
+
+        #first-barchart>div,#second-barchartt>div, #first-piechartt>div, #second-piechartt>div,#third-piechartt>div{
+            height:100%;
+            width: 100%;
+        }
+        //头部模块;在图表中描述图表内容的说明文字        
+        section>div{
+            p{
+                color:@second-fontCOlor;
+                margin-top:20px;
+            }
+            hr{
+                border: 1px @module-borderColor solid;
+                width:100%;
+                margin-top: 20px;
+            }
+        }
+        section>div,.description-bottom,.description-center{
+            margin-right: @spacing-module;
+            margin-left: @spacing-module;             
+        }
+        //在图表尾部的说明文字
+        .description-bottom{
+            position:absolute;
+            bottom: 16px;
+            p{
+                margin-bottom:0;
+            }
+        }
+        //在图表中部的说明文字
+        .description-center{
+            margin-top: 60px;
+            margin-bottom: -30px;
+            p{
+                margin-bottom:0;
+            }
+        } 
+    }
+    //第一行图表模块
+    .charts-row{
+        height:@chart-height;
+        // margin-top:@header-height;
+        .chart-1{
+            width:32%;
+            float:left;
+        }
+        .chart-2{
+            width:66%;
+            margin-left:2%;
+            float:left;
+        }
+        #first-barchart{
+            height:80%;
+        }        
+    }    
+    //第二行图表模块
+    .charts-row-2{
+        height:@chart-height * 2 + @spacing-module;     //第二行图表模块的间距
+        .chart-3{
+            width:66%;
+            float:left;
+        }
+        .charts-col{
+            width:32%;  
+            margin-left:2%;
+            float:left;
+            .chart-4{
+                width:100%;
+                height:@chart-height;
+                margin-bottom: @spacing-module;            
+            }
+            .chart-5{
+                width:100%;
+                height:@chart-height;
+            }    
+        } 
+        #second-barchart{
+            height:80%;
+        }
+    }         
+    //图表模块行
+    .charts-row,.charts-row-2{
+        margin-bottom: @spacing-module;                 //图表模块行与行之间的间距
+    }  
+    
+    /*审计日志模块的样式*/
+    .logs-container{
+        width:100%;        
+        /*审计日志模块中按钮部分的样式*/
+        .dblogs-bt-group{    
+            margin:@spacing-module;
+            .group-left{
+                float:left;
+            }
+            .group-right{
+                float:right;
+                /*隐藏日期选择器的内联弹出框*/
+                .datepicker-inline{
+                    display: none !important;
+                }
+                /*日期输入框*/
+                .input-group.datepicker{
+                    float: left;
+                    margin-right: 24px; 
+                    width:200px;
+                    z-index: 0;
+                    .form-control{
+                        height: 38px;
+                        border-radius: 4px;
+                    }
+                }
+                
+            }
+            .input-text{
+                width:300px;
+                height:38px;
+                margin-right: @spacing-module; 
+                background-color: @module-bcColor;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        /*审计日志表格*/
+        table{
+            width:100%;                
+            th,td{
+                line-height: 20px;
+                padding:20px 0 20px 2%;
+            }
+            tbody tr:nth-child(2n+1) {                    
+                background: @module-bcColor;
+            }
+            tbody tr:nth-child(2n) {
+                background: @main-light-bcColor;
+            }
+            tbody tr td:nth-child(2), tbody tr td:nth-child(6) {
+                color: #03A9F4;
+            }
+            thead tr{
+                background: @main-light-bcColor;
+            }
+            .logslist-date,.logslist-db,.logslist-host{
+                width:11%;
+            }
+            .logslist-name{
+                width:14%;
+            }
+            .logslist-user{
+                width:7%;
+            }
+            .logslist-query{
+                width:43%;
+            }
+        }
+        .pagination-all{
+            margin: 0;
+        }
+    }    
+}
+
+/*覆盖日期选择器弹出框的默认样式*/
+.datepicker-dropdown{
+    z-index: 0 !important;
+    background: #3f444f;
+    table{
+        color: #fff;
+    }
+    table thead tr{
+        background-color: transparent;
+    }        
+    .datepicker-switch:hover, 
+    .prev:hover, 
+    .next:hover, 
+    tfoot tr th:hover{
+        background-color: #202129
+    }
+    /*重写日历单元格的选中等样式*/
+    table tr td{
+        &.active:active:hover,
+        &.active.highlighted:active:hover,
+        &.active.active:hover,
+        &.active.highlighted.active:hover,
+        &.active:active:focus,
+        &.active.highlighted:active:focus,
+        &.active.active:focus,
+        &.active.highlighted.active:focus,
+        &.active:active.focus,
+        &.active.highlighted:active.focus, 
+        &.active.active.focus,
+        &.active.highlighted.active.focus
+        &.active:active, 
+        &.active.active,
+        &.active.highlighted:active,
+        &.active.highlighted.active,
+        &.day:hover, 
+        &.focused,
+        span:hover, 
+        span.focused,
+        span.active:active:hover, 
+        span.active:hover:active:hover, 
+        span.active.disabled:active:hover,
+        span.active.disabled:hover:active:hover,
+        span.active.active:hover,
+        span.active:hover.active:hover, 
+        span.active.disabled.active:hover, 
+        span.active.disabled:hover.active:hover, 
+        span.active:active:focus, 
+        span.active:hover:active:focus, 
+        span.active.disabled:active:focus, 
+        span.active.disabled:hover:active:focus, 
+        span.active.active:focus, 
+        span.active:hover.active:focus, 
+        span.active.disabled.active:focus, 
+        span.active.disabled:hover.active:focus, 
+        span.active:active.focus, 
+        span.active:hover:active.focus, 
+        span.active.disabled:active.focus, 
+        span.active.disabled:hover:active.focus, 
+        span.active.active.focus, 
+        span.active:hover.active.focus, 
+        span.active.disabled.active.focus, 
+        span.active.disabled:hover.active.focus {
+            background-color: #007ae1 !important;
+            color:#fff !important;
+        }
+        &.old,
+        &.new{
+            color: #777777 !important;
+        }
+        &.disabled, 
+        &.disabled:hover,
+        span.disabled,
+        span.disabled:hover{
+            color: #777777 !important;
+            background-color: transparent !important;
+        }
+        &.today{
+            color: #000 !important;
+        }
+    }
+    table tbody tr td:nth-child(2n){
+        color: #fff;
+    }
+}
+.datepicker-dropdown:after{
+    border-bottom: 6px solid #3f444f !important;
+}
+.datepicker-dropdown.datepicker-orient-top:after{
+    border-top: 6px solid #3f444f !important;
+}
+//主体部分---------------------------------END
+

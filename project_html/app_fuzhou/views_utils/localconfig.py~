@@ -1,0 +1,49 @@
+"""
+# local config for parse share.json vars
+"""
+import json
+
+from octastack_fuzhou_web.settings import STATICFILES_DIRS
+
+
+SHARE_JSON = STATICFILES_DIRS[0] + "/json/share.json"
+
+
+class JsonConfiguration:
+    """
+    @:param
+        sudopassword for sudoers' password
+        server_ip for server's ip
+        mysql_pass for mysql's root user password
+        client_waf_ip for ip for waf client
+    """
+    def __init__(self):
+        self.sudopassword = None
+        self.server_ip = None
+        self.mysql_pass = None
+        self.mysql_port = None
+        self.mysql_user = None
+        self.mysql_database = None
+        self.mysql_host = None
+        self.db_ip_list = None
+        self.client_audit_hosts = None
+        self.config()
+
+    def config(self):
+        """
+        获取share.json文件中的配置信息
+        :return:
+        """
+        with open(SHARE_JSON, 'r') as conf:
+            rec = conf.read()
+        records = json.loads(rec)
+
+        self.sudopassword = records["sudopassword"]
+        self.server_ip = records["server_ip"]
+        self.mysql_pass = records["mysql_password"]
+        self.mysql_port = records["mysql_port"]
+        self.mysql_user = records["mysql_user"]
+        self.mysql_database = records["mysql_database"]
+        self.mysql_host = records["mysql_host"]
+        self.db_ip_list = records['db_ip_list']
+        self.client_audit_hosts = records['client_audit_hosts']
