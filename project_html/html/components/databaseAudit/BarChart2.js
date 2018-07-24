@@ -1,7 +1,5 @@
 /**
  * 数据库审计页面柱状图
- * Created by ZHONG Mengting
- * on 2017/04/21
  */
 import React from "react";                            //引入react
 import echarts from "echarts";                       // 引入echarts

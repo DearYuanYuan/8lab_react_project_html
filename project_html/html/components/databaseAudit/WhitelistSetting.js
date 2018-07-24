@@ -1,7 +1,5 @@
 /**
  * 数据库审计页面中'白名单操作'按钮的弹出框
- * created by ZHONG Mengting
- * on 2017/04/22
  */
 import React from "react";
 import $ from "jquery";

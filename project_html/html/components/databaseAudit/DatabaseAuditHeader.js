@@ -1,7 +1,5 @@
 /**
  * 数据库审计标签页的头部
- * created by ZHONG Mengting
- * on 2017/04/20
  */
 import React from "react";
 import {

@@ -1,7 +1,5 @@
 /**
  * 数据库审计标签页的饼状图
- * created by ZHONG Mengting
- * on 2017/04/21
  */
 import React from "react";
 import echarts from "echarts";

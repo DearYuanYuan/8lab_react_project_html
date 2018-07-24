@@ -1,7 +1,5 @@
 /**
  * 数据库审计标签页的主体部分
- * created by ZHONG Mengting
- * on 2017/04/20
  */
 import React from "react";
 import PieChart from "./PieChart"; //饼状图展示
